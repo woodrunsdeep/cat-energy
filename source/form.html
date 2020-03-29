@@ -27,6 +27,83 @@
       </nav>
     </header>
     <main class="page-main">
+      <h1 class="page-main__title">Подбор программы</h1>
+      <p class="page-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__fieldset">
+          <legend class="visually-hidden">Личные данные питомца</legend>
+            <label class="form__label">
+              Имя:*
+              <input class="form__text-input" type="text" name="name" placeholder="Барсик" required>
+            </label>
+            <label class="form__label">
+              Вес(кг):*
+              <input class="form__text-input" type="number" name="weight" placeholder="7" required min="0">
+            </label>
+            <label class="form__label">
+              Возраст(лет):
+              <input class="form__text-input" type="number" name="age" placeholder="7">
+            </label>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="visually-hidden">Цель</legend>
+          <label class="form__label">
+            <input class="visually-hidden" type="radio" name="objective" value="weight-loss" checked>
+            <span class="form__radio"></span>
+            Похудение
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden" type="radio" name="objective" value="weight-gain">
+            <span class="form__radio"></span>
+            Набор массы
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden" type="radio" name="objective" value="advice-needed">
+            <span class="form__radio"></span>
+            Не знаю (Нужен ваш совет)
+          </label>
+        </fieldset>
+        <fieldset class="form__fieldset fieldset">
+          <legend class="fieldset__title">Контактные данные (владельца кота)</legend>
+          <label class="form__label">
+            E-mail:*
+            <input class="form__text-input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+          </label>
+          <label class="form__label">
+            Телефон:*
+            <input class="form__text-input" type="tel" name="telephone" placeholder="8 (960) 900-60-90" required>
+          </label>
+        </fieldset>
+        <label class="form__textarea-label">
+          Комментарий
+          <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </label>
+        <fieldset class="form__fieldset fieldset">
+          <legend class="fieldset__title">Дополнительно</legend>
+          <label class="form__label">
+            <span class="form__checkbox"></span>
+            <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+            Сахарозаменитель
+          </label>
+          <label class="form__label">
+            <span class="form__checkbox"></span>
+            <input class="visually-hidden" type="checkbox" name="drinking-water">
+            Питьевая вода
+          </label>
+          <label class="form__label">
+            <span class="form__checkbox"></span>
+            <input class="visually-hidden" type="checkbox" name="milk">
+            Молоко
+          </label>
+          <label class="form__label">
+            <span class="form__checkbox"></span>
+            <input class="visually-hidden" type="checkbox" name="vitamins">
+            Витамины
+          </label>
+        </fieldset>
+        <button class="form__button button" type="submit">Отправить заявку</button>
+        <small class="form__legend">* — Обязательные поля</small>
+      </form>
     </main>
     <footer class="page-footer">
       <p class="page-footer__text">Приглашаем к сотрудничеству дилеров!</p>
