@@ -1,0 +1,20 @@
+.page-footer {
+  background-color: $accent-color;
+}
+
+.page-footer__text-wrapper--contrast {
+  background-color: #ffffff;
+}
+
+.page-footer__text {
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: $brand-font;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.page-footer__socials {
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}

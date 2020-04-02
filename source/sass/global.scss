@@ -11,7 +11,10 @@ html {
 body {
   margin: 0;
 
-  font-family: $brand-font;
+  font-size: 14px;
+  line-height: 1.29;
+  font-family: $base-font;
+  color: $base-font-color;
 }
 
 a {

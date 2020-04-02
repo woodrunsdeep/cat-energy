@@ -1,0 +1,18 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__copyright {
+  padding: $gap;
+}
+
+.copyright__link {
+  font-size: 16px;
+  color: $base-font-color;
+}
+
+.copyright__logo {
+  fill: #666666;
+}
