@@ -25,3 +25,15 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  white-space: nowrap; /* added line */
+
+  clip: rect(1px, 1px, 1px, 1px);
+}
