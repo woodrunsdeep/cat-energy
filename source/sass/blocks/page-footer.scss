@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: $accent-color;
+  background-color: $color-accent;
 }
 
 .page-footer__text-wrapper--contrast {
@@ -10,15 +10,15 @@
   font-size: 16px;
   line-height: 1.25;
   font-family: $font-brand;
-  color: $black;
+  color: $color-black;
   text-transform: uppercase;
 }
 
 .page-footer__socials {
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
 }
 
 .page-footer__copyright {
-  padding: $gap;
+  padding: $offset-base;
 }

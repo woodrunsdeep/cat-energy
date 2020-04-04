@@ -1,5 +1,5 @@
 .features {
-  margin: $gap;
+  margin: $offset-base;
 }
 
 .features__list {
@@ -15,10 +15,10 @@
   display: flex;
   align-items: center;
   min-height: 60px;
-  margin-bottom: $gap;
-  margin-left: 60px + $gap;
+  margin-bottom: $offset-base;
+  margin-left: 60px + $offset-base;
 
-  color: $base-font-color;
+  color: $color-font-base;
 }
 
 .features__item::before {
@@ -29,5 +29,5 @@
   width: 60px;
   height: 60px;
 
-  background-color: $brand-color;
+  background-color: $color-brand;
 }

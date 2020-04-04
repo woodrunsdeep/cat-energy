@@ -1,14 +1,14 @@
 .objective {
-  padding: $gap;
+  padding: $offset-base;
 
-  background-color: $accent-color;
+  background-color: $color-accent;
 }
 
 .objective__title {
   font-size: 24px;
   line-height: 1.54;
   font-family: $font-brand;
-  color: $black;
+  color: $color-black;
   text-transform: uppercase;
 }
 
@@ -16,6 +16,6 @@
   font-size: 16px;
   line-height: 1;
   font-family: $font-brand;
-  color: $black;
+  color: $color-black;
   text-transform: uppercase;
 }
