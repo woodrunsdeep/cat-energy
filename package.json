@@ -4,7 +4,10 @@
   "private": true,
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
+<<<<<<< HEAD
     "@htmlacademy/editorconfig-cli": "1.x",
+=======
+>>>>>>> 2d836b9d0326ba90ff75036a9f92564e2bbe5269
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "gulp": "^4.0.2",
