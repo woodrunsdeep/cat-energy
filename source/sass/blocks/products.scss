@@ -1,0 +1,14 @@
+.products__list {
+  padding: 0;
+
+  border-top: 1px solid $color-border;
+}
+
+.products__item {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  list-style: none;
+
+  border-bottom: 1px solid $color-border;
+}

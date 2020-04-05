@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.29;
+  font-family: $font-base;
+  color: $color-font-base;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  white-space: nowrap; /* added line */
+
+  clip: rect(1px, 1px, 1px, 1px);
+}
