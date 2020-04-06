@@ -1,6 +1,16 @@
 .specs {
   border-collapse: collapse;
-  font-size: 12px;
   line-height: 1.33;
   color: $color-font-base;
+  display: flex;
+  flex-direction: column;
+}
+
+.specs--tiny {
+  font-size: 12px;
+}
+
+.specs__item {
+  display: flex;
+  justify-content: space-between;
 }
