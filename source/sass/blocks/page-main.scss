@@ -1,3 +1,19 @@
+.page-main {
+  padding-left: $offset-base;
+  padding-right: $offset-base;
+}
+
 .page-main__title {
-  margin-left: $offset-base;
+  margin-top: 16px;
+}
+
+.page-main__text {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-family: $font-brand;
+  line-height: 1.29;
+  color: $color-black;
+  text-transform: uppercase;
+  margin-right: $offset-base;
+  padding-right: 20px;
 }

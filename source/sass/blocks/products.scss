@@ -1,3 +1,7 @@
+.products__title {
+  margin-left: $offset-base;
+}
+
 .products__list {
   padding: 0;
 
@@ -11,4 +15,15 @@
   list-style: none;
 
   border-bottom: 1px solid $color-border;
+}
+
+/* Отступы для рамок доп. товаров */
+
+.products__item--offset {
+  padding: 0;
+  margin: 0 $offset-base;
+}
+
+.products__bonus {
+  margin: $offset-base;
 }

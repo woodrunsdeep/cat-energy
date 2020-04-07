@@ -11,10 +11,30 @@
   text-transform: uppercase;
 
   background-color: $color-brand;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-brand-action;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--gray {
   color: $color-font-base;
 
   background-color: $color-accent;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }

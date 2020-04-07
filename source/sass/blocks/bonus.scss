@@ -1,1 +1,28 @@
-//
+.bonus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 289px;
+  margin-top: 40px;
+  padding: 40px 50px;
+
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bonus__icon {
+  margin: 25px;
+
+  fill: #ffffff;
+}
+
+.bonus__text {
+  margin-top: auto;
+  margin-bottom: 2px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #ffffff;
+}
