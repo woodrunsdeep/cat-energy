@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
 
   font-size: 14px;
   line-height: 1.29;
@@ -37,3 +38,5 @@ img {
 
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+@include tablet-only;

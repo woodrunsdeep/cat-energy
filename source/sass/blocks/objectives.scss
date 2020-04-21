@@ -1,19 +1,32 @@
-.objectives {
-  margin: $offset-base;
-  margin-top: 0;
-}
-
 .objectives__list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  @include list-reset;
 }
 
-.objectives__item {
+.objectives__item:not(:last-of-type) {
   margin-bottom: $offset-base;
 }
 
-.objectives__item:last-of-type {
-  margin-bottom: 0;
+/* --------- Tablet --------- */
+
+@media (min-width: $tablet-width) {
+  .objectives__item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+/* --------- Desktop --------- */
+
+@media (min-width: $desktop-width) {
+  .objectives__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .objectives__item {
+    display: flex;
+  }
+
+  .objectives__item:not(:last-of-type) {
+    margin-bottom: 0;
+  }
 }

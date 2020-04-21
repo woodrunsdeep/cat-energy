@@ -1,32 +1,78 @@
 .features {
-  margin: $offset-base;
+  padding-bottom: 22px;
 }
 
 .features__list {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  @include list-reset;
 }
 
 .features__item {
   display: flex;
   align-items: center;
-  min-height: 60px;
   margin-bottom: $offset-base;
-
-  color: $color-font-base;
 }
 
-.features__item::before {
-  content: "";
-  position: relative;
-  margin-right: $offset-base;
+/* --------- Tablet --------- */
 
-  min-width: 60px;
-  height: 60px;
+@media (min-width: $tablet-width) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-  background-color: $color-brand;
+  .features__item {
+    position: relative;
+
+    flex-direction: column;
+    align-items: flex-start;
+    width: 245px;
+    min-height: 245px;
+    margin-right: 80px;
+    margin-bottom: 70px;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .features__item::after {
+    position: absolute;
+    top: 0;
+    left: 115px;
+    z-index: -1;
+
+    font-size: 281px;
+    line-height: 1;
+    font-family: $font-brand;
+    text-align: left;
+    color: #f2f2f2;
+  }
+
+  .features__item:nth-of-type(1)::after {
+    content: "1";
+  }
+
+  .features__item:nth-of-type(2)::after {
+    content: "2";
+  }
+
+  .features__item:nth-of-type(3)::after {
+    content: "3";
+  }
+
+  .features__item:nth-of-type(4)::after {
+    content: "4";
+  }
+}
+
+/* --------- Desktop --------- */
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    margin-right: 60px;
+  }
+
+  .features__item:last-of-type {
+    margin-right: 0;
+  }
 }
