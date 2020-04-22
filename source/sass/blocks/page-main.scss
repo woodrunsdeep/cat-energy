@@ -1,19 +1,51 @@
 .page-main {
-  padding-left: $offset-base;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.page-main__inner {
+  width: 320px;
+  max-width: 1300px;
+  margin: 0 auto;
   padding-right: $offset-base;
+  padding-left: $offset-base;
 }
 
-.page-main__title {
-  margin-top: 16px;
+.page-main__hero {
+  margin-bottom: 22px;
 }
 
-.page-main__text {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  font-family: $font-brand;
-  line-height: 1.29;
-  color: $color-black;
-  text-transform: uppercase;
-  margin-right: $offset-base;
-  padding-right: 20px;
+.page-main__objectives {
+  margin-bottom: $offset-base;
+}
+
+/* --------- Tablet --------- */
+
+@media (min-width: $tablet-width) {
+  .page-main__inner {
+    width: $tablet-width;
+    padding: 0 30px;
+  }
+
+  .page-main__form {
+    padding-right: 37px;
+    padding-left: 40px;
+  }
+}
+
+/* --------- Desktop --------- */
+
+@media (min-width: $desktop-width) {
+  .page-main__inner {
+    width: $desktop-width;
+    padding: 0 40px;
+  }
+
+  .page-main__form {
+    padding: 0;
+  }
+
+  .page-main__hero {
+    margin-bottom: 80px;
+  }
 }

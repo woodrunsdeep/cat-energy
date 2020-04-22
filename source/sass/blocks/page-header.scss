@@ -1,8 +1,60 @@
 .page-header {
-  min-height: 65px;
-  padding-top: 11px;
-  padding-right: $offset-base;
-  padding-left: $offset-base;
+  min-height: 66px;
 
   border-bottom: 1px solid $color-border;
+}
+
+.page-header__inner {
+  position: relative;
+
+  width: 320px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-right: $offset-base;
+  padding-left: $offset-base;
+}
+
+.page-header__logo {
+  display: inline-block;
+  align-self: flex-start;
+  height: 65px;
+  padding-top: 10px;
+
+  vertical-align: middle;
+}
+
+.page-header__logo-image {
+  width: 191px;
+  height: 39px;
+}
+
+/* --------- Tablet --------- */
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    flex-direction: row;
+
+    border-bottom-color: transparent;
+  }
+
+  .page-header__inner {
+    display: flex;
+    width: $tablet-width;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .page-header__logo {
+    margin-left: 0;
+  }
+}
+
+/* --------- Desktop --------- */
+
+@media (min-width: $desktop-width) {
+  .page-header__inner {
+    width: $desktop-width;
+    height: 142px;
+    padding: 0 40px;
+  }
 }

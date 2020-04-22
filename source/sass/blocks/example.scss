@@ -1,7 +1,20 @@
 .example {
-  padding: $offset-base;
-
   background-color: $color-accent;
+
+  @include full-width;
+}
+
+.example__inner {
+  margin: 0 auto;
+  padding-left: $offset-base;
+  padding-right: $offset-base;
+
+  width: 320px;
+}
+
+.example__title {
+  margin-top: 7px;
+  margin-bottom: 23px;
 }
 
 .example__text {

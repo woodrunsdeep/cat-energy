@@ -1,0 +1,26 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin full-width {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+@mixin tablet-only {
+  .tablet-only {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    .tablet-only {
+      display: block;
+    }
+  }
+}

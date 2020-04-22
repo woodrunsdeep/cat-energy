@@ -1,0 +1,24 @@
+.feature__icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin-right: $offset-base;
+
+  background-color: $color-brand;
+}
+
+.feature__text {
+  margin: 0;
+
+  color: $color-font-base;
+}
+
+/* --------- Tablet --------- */
+
+@media (min-width: $tablet-width) {
+  .feature__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+  }
+}

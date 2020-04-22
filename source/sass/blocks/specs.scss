@@ -1,16 +1,26 @@
 .specs {
-  border-collapse: collapse;
-  line-height: 1.33;
-  color: $color-font-base;
   display: flex;
   flex-direction: column;
-}
 
-.specs--tiny {
+  border-collapse: collapse;
   font-size: 12px;
+  line-height: 1.33;
+  color: $color-font-base;
 }
 
 .specs__item {
   display: flex;
   justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .specs__item {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .specs {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 33px;
+  }
 }
