@@ -6,11 +6,9 @@
   text-transform: uppercase;
 }
 
-.extra-product__price-list {
+.extra-product__details {
   display: flex;
   justify-content: space-between;
-
-  @include list-reset;
 }
 
 /* --------- Tablet --------- */
@@ -38,6 +36,7 @@
 
   .extra-product__quantity {
     min-width: 130px;
+    margin: 0;
 
     font-size: 16px;
     text-align: right;
@@ -45,6 +44,7 @@
 
   .extra-product__price {
     min-width: 94px;
+    margin: 0;
 
     font-size: 16px;
     text-align: right;
@@ -74,7 +74,7 @@
     margin-bottom: 0;
   }
 
-  .extra-product__price-list {
+  .extra-product__details {
     min-width: 286px;
   }
 
