@@ -38,7 +38,7 @@
         <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="post">
           <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
           <div class="form__wrapper">
-            <fieldset class="form__cat-data form__fieldset">
+            <fieldset class="form__fieldset">
               <legend class="visually-hidden">Личные данные питомца</legend>
                 <ul class="form__list">
                   <li class="form__list-item">
@@ -87,25 +87,25 @@
                 </li>
               </ul>
             </fieldset>
+            <fieldset class="form__fieldset form__fieldset--grow">
+              <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
+              <h2 class="subheading" aria-hidden="true">Контактные данные (владельца кота)</h2>
+              <ul class="form__list form__list--row">
+                <li class="form__list-item">
+                  <label class="form__label">
+                    E-mail:*
+                    <input class="form__text-input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  </label>
+                </li>
+                <li class="form__list-item">
+                  <label class="form__label">
+                    Телефон:*
+                    <input class="form__text-input" type="tel" name="telephone" placeholder="8 (960) 900-60-90" required>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
-          <fieldset class="form__fieldset">
-            <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
-            <h2 class="subheading" aria-hidden="true">Контактные данные (владельца кота)</h2>
-            <ul class="form__contacts form__list">
-              <li class="form__contact-item form__list-item">
-                <label class="form__label">
-                  E-mail:*
-                  <input class="form__text-input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-                </label>
-              </li>
-              <li class="form__contact-item form__list-item">
-                <label class="form__label">
-                  Телефон:*
-                  <input class="form__text-input" type="tel" name="telephone" placeholder="8 (960) 900-60-90" required>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
           <label class="form__textarea-label">
             <span class="subheading">Комментарий</span>
             <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
