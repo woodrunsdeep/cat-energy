@@ -1,12 +1,30 @@
 .form {
+  font-family: $font-brand;
   color: #222222;
 }
 
+.form__text {
+  max-width: 270px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  line-height: 1.29;
+  color: $color-black;
+  text-transform: uppercase;
+}
+
+.form__list {
+  @include list-reset;
+}
+
+.form__list-item {
+  margin-bottom: 14px;
+}
+
 .form__fieldset {
-  display: flex;
-  flex-direction: column;
+  min-width: 280px;
   margin: 0;
-  padding: 16px 0;
+  padding: 0;
 
   border: none;
 }
@@ -14,24 +32,24 @@
 .form__label {
   display: flex;
   align-items: center;
-  margin-top: 7px;
-  margin-bottom: 7px;
 
   font-size: 16px;
   line-height: 1.13;
-  font-family: $font-brand;
   text-transform: uppercase;
+}
+
+.form__label:not(:last-of-type) {
+  margin-bottom: 14px;
 }
 
 .form__text-input {
   flex-grow: 1;
-  width: 100px;
+  min-width: 100px;
   min-height: 45px;
   margin-left: 16px;
   padding: 0 15px;
 
   font-size: 16px;
-  font-family: $font-brand;
   text-transform: uppercase;
 
   border: solid 1px $color-input-border;
@@ -41,12 +59,13 @@
 
 .form__text-input::placeholder,
 .form__textarea::placeholder {
+  font-family: $font-brand;
   color: $color-dark-gray;
+
   opacity: 1;
 }
 
 .form__textarea {
-  display: block;
   width: 100%;
   min-height: 150px;
   padding: 12px;
@@ -62,7 +81,152 @@
   resize: none;
 }
 
+.form__objectives {
+  margin-top: 0;
+  margin-right: -20px;
+  margin-bottom: 0;
+  margin-left: -20px;
+  padding-top: 21px;
+  padding-right: 20px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+
+  border: 1px solid $color-input-border;
+}
+
+.form__objective {
+  display: flex;
+  min-height: 30px;
+}
+
+.form__objective:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.form__extra-products {
+  @include list-reset;
+}
+
+.form__extra-product {
+  margin-bottom: 12px;
+}
+
+.form__button {
+  width: 100%;
+}
+
 .form__legend {
   line-height: 1.14;
   color: $color-dark-gray;
+}
+
+/* --------- Tablet Only --------- */
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  .form__extra-product:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+
+/* --------- Tablet --------- */
+
+@media (min-width: $tablet-width) {
+  .form__text {
+    max-width: 385px;
+
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .form__list-item {
+    margin-bottom: 20px;
+  }
+
+  .form__textarea {
+    min-height: 174px;
+  }
+
+  .form__extra-products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__extra-product {
+    min-width: 285px;
+    margin-right: 60px;
+    margin-bottom: 32px;
+  }
+
+  .form__button {
+    width: unset;
+    min-width: 285px;
+  }
+
+  .form__objectives {
+    margin: 0;
+    padding: 25px 28px;
+  }
+
+  .form__objective {
+    min-height: 40px;
+  }
+}
+
+/* --------- Desktop --------- */
+
+@media (min-width: $desktop-width) {
+  .form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .form__fieldset--grow {
+    flex-grow: 1;
+  }
+
+  .form__list--row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .form__list-item {
+    min-width: 570px;
+  }
+
+  .form__text-input {
+    min-height: 52px;
+  }
+
+  .form__objectives {
+    display: flex;
+    flex-direction: column;
+    min-width: 570px;
+    padding-top: 25px;
+    padding-right: 28px;
+    padding-bottom: 25px;
+    padding-left: 28px;
+
+    border: 1px solid $color-input-border;
+  }
+
+  .form__extra-product {
+    min-width: 245px;
+    margin-right: 80px;
+  }
+
+  .form__extra-product:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .form__button {
+    min-width: 570px;
+  }
 }

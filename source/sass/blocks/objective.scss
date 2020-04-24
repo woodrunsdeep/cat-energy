@@ -1,15 +1,28 @@
 .objective {
-  padding: $offset-base;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 22px $offset-base;
 
   background-color: $color-accent;
 }
 
 .objective__title {
+  margin: 0;
+
+  font-weight: normal;
   font-size: 24px;
   line-height: 1.54;
   font-family: $font-brand;
   color: $color-black;
   text-transform: uppercase;
+}
+
+.objective__text {
+  margin-bottom: 19px;
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .objective__link {
@@ -18,4 +31,131 @@
   font-family: $font-brand;
   color: $color-black;
   text-transform: uppercase;
+}
+
+.objective__icon {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-top: 3px;
+  margin-right: 19px;
+  margin-bottom: 7px;
+  margin-left: 2px;
+
+  background-color: $color-brand;
+  border-radius: 50%;
+}
+
+.objective__cat-slim,
+.objective__cat-pro {
+  position: absolute;
+}
+
+.objective__cat-slim {
+  bottom: 3px;
+}
+
+/* --------- Tablet --------- */
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  .objective {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 42px;
+  }
+
+  .objective__text {
+    flex-grow: 1;
+  }
+
+  .objective__title {
+    margin-top: 24px;
+  }
+
+  .objective__icon {
+    position: absolute;
+    top: 91px;
+    right: 61px;
+
+    width: 200px;
+    height: 200px;
+    margin: 0;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .objective {
+    position: relative;
+
+    align-content: flex-start;
+    min-height: 372px;
+    padding: 52px;
+  }
+
+  .objective__title {
+    font-size: 36px;
+    line-height: 1.03;
+  }
+
+  .objective__text {
+    width: 375px;
+    margin-top: 15px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    border-bottom: none;
+  }
+
+  .objective__link {
+    margin-top: auto;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+  }
+
+  .objective__cat-slim {
+    bottom: 18px;
+
+    height: 194px;
+  }
+
+  .objective__cat-pro {
+    height: 113px;
+  }
+}
+
+/* --------- Desktop --------- */
+
+@media (min-width: $desktop-width) {
+  .objective {
+    width: 570px;
+  }
+
+  .objective__text {
+    width: auto;
+    margin-top: 50px;
+  }
+
+  .objective__icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 64px;
+  }
+
+  .objective__cat-slim {
+    width: 71px;
+    height: 87px;
+    margin-bottom: 9px;
+  }
+
+  .objective__cat-pro {
+    width: 134px;
+    height: 57px;
+  }
 }
