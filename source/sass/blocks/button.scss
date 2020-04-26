@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 40px; /* IE11 fix */
   min-height: 40px;
+  padding: 11px;
 
-  font-size: 14px;
-  line-height: 1.29;
+  font-size: 16px;
+  line-height: 1.25;
   font-family: $font-brand;
   color: #ffffff;
   text-transform: uppercase;
@@ -42,5 +44,6 @@
 @media (min-width: $tablet-width) {
   .button {
     font-size: 16px;
+    line-height: 1;
   }
 }
