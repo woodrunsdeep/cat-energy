@@ -140,17 +140,23 @@
       </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__inner">
-        <div class="page-footer__top page-footer__top--contrast">
+      <div class="page-footer__top page-footer__top--contrast">
+        <div class="page-footer__top-inner">
           <p class="page-footer__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="page-footer__address address">
             <span class="address__street">ул. Большая Конюшенная, д. 19/8</span>
-            <span class="address__street">Санкт-Петербург</span>
+            <span class="address__city">Санкт-Петербург</span>
           </p>
         </div>
+      </div>
+      <div class="page-footer__inner">
         <div class="page-footer__middle">
           <a class="page-footer__map map-link" href="https://goo.gl/maps/5y6q4TU5HUWg9hCh6" target="_blank">
-            <img class="map-link__image" src="img/bg-map-mobile@1x.png" alt="Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8" width="320" height="400">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+              <img class="map-link__image" src="img/bg-map-mobile@1x.png" alt="Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8" width="320" height="400">
+            </picture>
           </a>
         </div>
         <div class="page-footer__bottom">
