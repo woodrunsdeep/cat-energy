@@ -47,6 +47,11 @@
   .page-header__logo {
     margin-left: 0;
   }
+
+  .page-header__logo-image {
+    width: 174px;
+    height: 59px;
+  }
 }
 
 /* --------- Desktop --------- */
@@ -58,3 +63,8 @@
     padding: 0 40px;
   }
 }
+
+  .page-header__logo-image {
+    width: 203px;
+    height: 60px;
+  }
