@@ -1,4 +1,7 @@
 .form {
+  display: flex;
+  flex-direction: column;
+
   font-family: $font-brand;
   color: #222222;
 }
@@ -116,7 +119,10 @@
 }
 
 .form__legend {
+  align-self: center;
+
   line-height: 1.14;
+  font-family: $font-base;
   color: $color-dark-gray;
 }
 
@@ -131,6 +137,19 @@
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__wrapper {
+    flex-grow: 1;
+  }
+
+  .form__fieldset {
+    flex-grow: 1;
+  }
+
   .form__text {
     max-width: 385px;
 
@@ -140,6 +159,10 @@
 
   .form__list-item {
     margin-bottom: 20px;
+  }
+
+  .form__textarea-label {
+    flex-grow: 1;
   }
 
   .form__textarea {
@@ -157,11 +180,6 @@
     margin-bottom: 32px;
   }
 
-  .form__button {
-    width: unset;
-    min-width: 285px;
-  }
-
   .form__objectives {
     margin: 0;
     padding: 25px 28px;
@@ -170,6 +188,19 @@
   .form__objective {
     min-height: 40px;
   }
+
+  .form__button {
+    width: 285px; /* IE11 fix */
+    min-width: 285px;
+    margin-right: 61px;
+  }
+
+  .form__legend {
+    align-self: center;
+
+    font-size: 16px;
+    line-height: 1;
+  }
 }
 
 /* --------- Desktop --------- */
@@ -177,9 +208,13 @@
 @media (min-width: $desktop-width) {
   .form__wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
+  }
+
+  .form__fieldset {
+    flex-grow: 0;
   }
 
   .form__fieldset--grow {
@@ -188,17 +223,17 @@
 
   .form__list--row {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__list-item {
+    min-width: 570px;
   }
 
   .form__label {
     font-size: 20px;
     line-height: 1;
-  }
-
-  .form__list-item {
-    min-width: 570px;
   }
 
   .form__text-input {
@@ -228,5 +263,6 @@
 
   .form__button {
     min-width: 570px;
+    margin-right: 82px;
   }
 }

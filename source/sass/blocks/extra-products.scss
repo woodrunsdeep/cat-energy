@@ -1,13 +1,16 @@
 .extra-products__list {
-  margin-bottom: 40px;
-
   @include list-reset;
+  margin-bottom: 40px;
 }
 
 .extra-products__item {
   padding-bottom: 20px;
 
   border-bottom: 1px solid $color-border;
+}
+
+.extra-products__bonus {
+  margin-bottom: 35px;
 }
 
 /* --------- Tablet --------- */
@@ -23,11 +26,20 @@
 
     border: none;
   }
+
+  .extra-products__bonus {
+    margin-top: 69px;
+    margin-bottom: 76px;
+  }
 }
 
 /* --------- Desktop --------- */
 
 @media (min-width: $desktop-width) {
+  .extra-products {
+    padding-bottom: 86px;
+  }
+
   .extra-products__inner {
     display: flex;
     justify-content: space-between;
@@ -36,5 +48,9 @@
   .extra-products__list {
     flex-grow: 1;
     max-width: 895px;
+  }
+
+  .extra-products__bonus {
+    margin: 0;
   }
 }

@@ -8,3 +8,24 @@
   border: none;
   cursor: pointer;
 }
+
+
+@media (min-width: $tablet-width) {
+  .slider__image {
+    display: block;
+    width: 100%;
+  }
+
+  .slider__button {
+    font-size: 20px;
+  }
+
+  .slider__controls {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .slider__toggle {
+    flex-grow: 1;
+  }
+}

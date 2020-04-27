@@ -18,7 +18,7 @@
           </button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active site-list__item--inverse">
+              <li class="site-list__item">
                 <a class="site-list__link site-list__link--inverse">Главная</a>
               </li>
               <li class="site-list__item">
@@ -105,48 +105,58 @@
         </section>
         <section class="example">
           <div class="example__inner">
-            <h2 class="example__title base-heading">Живой пример</h2>
-            <p class="example__text">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-            </p>
-            <table class="example__stats stats">
-              <tbody class="stats__body">
-                <tr class="stats__item">
-                  <td class="stats__value">5 кг</td>
-                  <td class="stats__parameter">снижение веса</td>
-                </tr>
-                <tr class="stats__item">
-                  <td class="stats__value">60 дней</td>
-                  <td class="stats__parameter">затрачено времени</td>
-                </tr>
-                <tr class="stats__costs costs">
-                  <td class="costs__text">Затраты на питание:</td>
-                  <td class="costs__value">15 000 руб.</td>
-                </tr>
-              </tbody>
-            </table>
-            <img class="example__image" src="img/before-mobile@1x.png" alt="Толстый котик до перехода на Кэт Энерджи" width="311" height="232">
+            <div class="example__story">
+              <h2 class="example__title base-heading">Живой пример</h2>
+              <p class="example__text">
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
+              </p>
+              <table class="example__stats stats">
+                <tbody class="stats__body">
+                  <tr class="stats__item">
+                    <td class="stats__value">5 кг</td>
+                    <td class="stats__parameter">снижение веса</td>
+                  </tr>
+                  <tr class="stats__item">
+                    <td class="stats__value">60 дней</td>
+                    <td class="stats__parameter">затрачено времени</td>
+                  </tr>
+                  <tr class="stats__costs costs">
+                    <td class="costs__text">Затраты на питание:</td>
+                    <td class="costs__value">15 000 руб.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="example__slider slider">
-              <button class="slider__button" type="button">Было</button>
-              <input class="slider__toggle" type="range" name="slider__toggle" id="slider__toggle" min="0" max="1" value="0">
-              <button class="slider__button" type="button">Стало</button>
+              <img class="slider__image" src="img/before-mobile@1x.png" alt="Толстый котик до перехода на Кэт Энерджи" width="311" height="232">
+              <div class="slider__controls">
+                <button class="slider__button" type="button">Было</button>
+                <input class="slider__toggle" type="range" name="slider__toggle" id="slider__toggle" min="0" max="1" value="0">
+                <button class="slider__button" type="button">Стало</button>
+              </div>
             </div>
           </div>
         </section>
       </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__inner">
-        <div class="page-footer__top page-footer__top--contrast">
+      <div class="page-footer__top page-footer__top--contrast">
+        <div class="page-footer__top-inner">
           <p class="page-footer__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="page-footer__address address">
             <span class="address__street">ул. Большая Конюшенная, д. 19/8</span>
-            <span class="address__street">Санкт-Петербург</span>
+            <span class="address__city">Санкт-Петербург</span>
           </p>
         </div>
+      </div>
+      <div class="page-footer__inner">
         <div class="page-footer__middle">
           <a class="page-footer__map map-link" href="https://goo.gl/maps/5y6q4TU5HUWg9hCh6" target="_blank">
-            <img class="map-link__image" src="img/bg-map-mobile@1x.png" alt="Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8" width="320" height="400">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+              <img class="map-link__image" src="img/bg-map-mobile@1x.png" alt="Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8" width="320" height="400">
+            </picture>
           </a>
         </div>
         <div class="page-footer__bottom">
