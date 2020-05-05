@@ -1,5 +1,6 @@
 .page-header {
   min-height: 66px;
+  padding-top: 10px;
 
   border-bottom: 1px solid $color-border;
 }
@@ -16,14 +17,13 @@
 
 .page-header__logo {
   display: inline-block;
-  align-self: flex-start;
-  height: 65px;
-  padding-top: 10px;
+  margin-bottom: 16px;
 
   vertical-align: middle;
 }
 
 .page-header__logo-image {
+  display: block;
   width: 191px;
   height: 39px;
 }
