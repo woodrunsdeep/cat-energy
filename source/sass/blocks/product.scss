@@ -1,58 +1,81 @@
-.product__content {
+.product {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product__image {
+  display: block;
+  width: 100%;
+}
+
+.product__image-wrapper {
+  width: 50%;
 }
 
 .product__text-wrapper {
+  display: flex;
   flex-grow: 1;
+  flex-direction: column;
+  width: 50%;
 }
 
 .product__title {
-  max-width: 100px;
+  max-width: 65%;
+  margin-top: 0;
+  margin-bottom: 13px;
 
+  font-weight: normal;
   font-size: 16px;
   line-height: 1.25;
   font-family: $font-brand;
   text-transform: uppercase;
 }
 
+.product__title-link {
+  color: $color-black;
+}
+
+.product__link {
+  flex-grow: 1;
+}
+
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
   .product {
-    display: flex;
     flex-grow: 1;
     flex-direction: column;
-    min-width: 324px;
+    max-width: 324px;
     min-height: 431px;
-    padding-right: 37px;
-    padding-bottom: 40px;
-    padding-left: 37px;
 
     background-color: #f2f2f2;
-  }
-
-  .product__content {
-    flex-direction: column;
-    align-items: center;
   }
 
   .product__image-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100%;
     height: 208px;
     margin-top: -82px;
+    margin-bottom: 37px;
   }
 
   .product__text-wrapper {
-    display: flex;
-    flex-direction: column;
+    flex-grow: 0;
     align-items: center;
     align-self: stretch;
+    width: 100%;
+    margin-bottom: auto;
+    padding-right: 37px;
+    padding-left: 37px;
   }
 
   .product__title {
     max-width: 140px;
+    margin-top: 0;
+    margin-bottom: 18px;
 
     font-size: 20px;
     line-height: 1;
@@ -71,7 +94,11 @@
   }
 
   .product__link {
-    margin-top: auto;
+    flex-grow: 0;
+    align-self: stretch;
+    margin-right: 37px;
+    margin-bottom: 40px;
+    margin-left: 37px;
   }
 }
 
@@ -79,12 +106,17 @@
 
 @media (min-width: $desktop-width) {
   .product {
-    min-width: 245px;
-    padding-right: 38px;
-    padding-left: 38px;
+    min-width: auto;
+    max-width: 245px;
   }
 
   .product__text {
     max-width: 169px;
+  }
+
+  .product__link {
+    margin-right: 38px;
+    margin-bottom: 41px;
+    margin-left: 38px;
   }
 }
