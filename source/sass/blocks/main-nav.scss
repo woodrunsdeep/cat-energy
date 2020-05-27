@@ -13,11 +13,11 @@
 }
 
 .main-nav--closed .main-nav__toggle {
-  /* Бургер */
   &::before {
+    /* Бургер */
     content: "";
     position: absolute;
-    top: 24px;
+    top: 23px;
     right: 20px;
 
     width: 24px;
@@ -29,10 +29,9 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  /* Иконка закрытия меню */
-
   &::before,
   &::after {
+    /* Иконка закрытия меню */
     content: "";
     position: absolute;
     top: 31px;
@@ -71,7 +70,6 @@
 
     display: block;
   }
-
 }
 
 /* --------- Tablet --------- */
