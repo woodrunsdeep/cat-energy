@@ -15,6 +15,21 @@ function formValidationStyling() {
     });
   }
 }
+function initSlider() {
+  var fatCat = document.querySelector(".slider__image-container--before");
+  var buttonBefore = document.querySelector(".slider__button--before");
+  var buttonAfter = document.querySelector(".slider__button--after");
+
+  if (buttonAfter && buttonBefore) {
+    buttonAfter.addEventListener("click", function(){
+      fatCat.style.width="0";
+    });
+
+    buttonBefore.addEventListener("click", function(){
+      fatCat.style.width="100vw";
+    });
+  }
+}
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
