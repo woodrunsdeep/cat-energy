@@ -2,7 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 22px $offset-base;
+  padding-top: 24px;
+  padding-right: $offset-base;
+  padding-bottom: 22px;
+  padding-left: $offset-base;
 
   background-color: $color-accent;
 }
@@ -19,6 +22,7 @@
 }
 
 .objective__text {
+  margin-top: 22px;
   margin-bottom: 19px;
   padding-bottom: 22px;
 
@@ -26,24 +30,49 @@
 }
 
 .objective__link {
+  position: relative;
+
   font-size: 16px;
   line-height: 1;
   font-family: $font-brand;
   color: $color-black;
   text-transform: uppercase;
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+
+    width: 25px;
+    height: 12px;
+    margin-left: 12px;
+
+    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 37px;
+
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .objective__icon {
   position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50px;
   height: 50px;
-  margin-top: 3px;
   margin-right: 19px;
-  margin-bottom: 7px;
   margin-left: 2px;
 
   background-color: $color-brand;
@@ -57,9 +86,15 @@
 
 .objective__cat-slim {
   bottom: 3px;
+  left: 8px;
 }
 
-/* --------- Tablet --------- */
+.objective__cat-pro {
+  bottom: 10px;
+  left: -9px;
+}
+
+/* --------- Tablet Only --------- */
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
   .objective {
@@ -70,10 +105,12 @@
 
   .objective__text {
     flex-grow: 1;
+    margin-top: 14px;
   }
 
   .objective__title {
-    margin-top: 24px;
+    margin-top: 29px;
+    margin-bottom: 10px;
   }
 
   .objective__icon {
@@ -87,14 +124,16 @@
   }
 }
 
+/* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
   .objective {
     position: relative;
 
-    align-content: flex-start;
+    align-content: space-between;
     min-height: 372px;
-    padding: 52px;
+    padding: 47px 52px;
+    padding-bottom: 62px;
   }
 
   .objective__title {
@@ -114,18 +153,30 @@
 
   .objective__link {
     margin-top: auto;
-    margin-bottom: 10px;
 
     font-size: 20px;
+
+    &::after {
+      top: 5px;
+
+      height: 11px;
+      margin-left: 22px;
+    }
   }
 
   .objective__cat-slim {
     bottom: 18px;
+    left: 29px;
 
+    width: 141px;
     height: 194px;
   }
 
   .objective__cat-pro {
+    bottom: 43px;
+    left: -36px;
+
+    width: 268px;
     height: 113px;
   }
 }
@@ -137,24 +188,35 @@
     width: 570px;
   }
 
+  .objective__title {
+    margin-bottom: 4px;
+  }
+
   .objective__text {
     width: auto;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 0;
   }
 
   .objective__icon {
     width: 100px;
     height: 100px;
-    margin-right: 64px;
+    margin-right: 62px;
+    margin-left: 0;
   }
 
   .objective__cat-slim {
+    bottom: 9px;
+    left: 13px;
+
     width: 71px;
     height: 97px;
-    bottom: 9px;
   }
 
   .objective__cat-pro {
+    bottom: 21px;
+    left: -18px;
+
     width: 134px;
     height: 57px;
   }

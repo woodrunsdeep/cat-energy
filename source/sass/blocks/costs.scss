@@ -1,9 +1,11 @@
 @media (min-width: $desktop-width) {
   .costs__text {
-    margin-right: 64px;
+    display: inline-block;
+    margin-right: 61px;
   }
 
   .costs__value {
+    display: inline-block;
     flex-shrink: 0;
   }
 }

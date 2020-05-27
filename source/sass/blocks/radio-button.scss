@@ -1,0 +1,33 @@
+.radio-button {
+  margin-right: 16px;
+}
+
+.form__label:hover .radio-button .radio-button__body,
+.form__radio-input:focus ~ .radio-button .radio-button__body {
+  stroke: #bababa;
+}
+
+.form__label:active .radio-button {
+  opacity: 0.3;
+}
+
+.form__radio-input:checked ~ .radio-button .radio-button__dot {
+  fill: #68b738;
+}
+
+.form__radio-input:disabled ~ .radio-button {
+  opacity: 0.2;
+}
+
+
+@media (min-width: 768px) {
+  .radio-button {
+    width: 40px;
+    height: 40px;
+    margin-right: 19px;
+  }
+
+  .radio-button__dot {
+    r: 9px;
+  }
+}

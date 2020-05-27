@@ -1,29 +1,32 @@
 .page-header {
   min-height: 66px;
+  padding-top: 10px;
 
   border-bottom: 1px solid $color-border;
 }
 
 .page-header__inner {
-  position: relative;
-
-  width: 320px;
-  max-width: 1300px;
-  margin: 0 auto;
   padding-right: $offset-base;
   padding-left: $offset-base;
 }
 
 .page-header__logo {
-  display: inline-block;
-  align-self: flex-start;
-  height: 65px;
-  padding-top: 10px;
+  margin-bottom: 16px;
 
   vertical-align: middle;
+
+  &[href]:hover .page-header__logo-image,
+  &[href]:focus .page-header__logo-image {
+    opacity: 0.8;
+  }
+
+  &[href]:active picture {
+    opacity: 0.6;
+  }
 }
 
 .page-header__logo-image {
+  display: block;
   width: 191px;
   height: 39px;
 }
@@ -31,30 +34,48 @@
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
+  .page-header__logo {
+    margin-bottom: 0;
+  }
+
   .page-header {
     flex-direction: row;
+    padding-top: 24px;
+    padding-bottom: 24px;
 
     border-bottom-color: transparent;
   }
 
   .page-header__inner {
     display: flex;
-    width: $tablet-width;
+    align-items: center;
+    max-width: $tablet-width;
+    margin: 0 auto;
     padding-right: 30px;
     padding-left: 30px;
   }
 
-  .page-header__logo {
-    margin-left: 0;
+  .page-header__logo-image {
+    width: 174px;
+    height: 59px;
   }
 }
 
 /* --------- Desktop --------- */
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    padding-top: 53px;
+    padding-bottom: 28px;
+  }
+
   .page-header__inner {
-    width: $desktop-width;
-    height: 142px;
+    max-width: $desktop-width;
     padding: 0 40px;
+  }
+
+  .page-header__logo-image {
+    width: 203px;
+    height: 60px;
   }
 }

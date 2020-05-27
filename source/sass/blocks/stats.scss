@@ -1,4 +1,6 @@
 .stats {
+  display: block;
+
   border-collapse: collapse;
 }
 
@@ -16,7 +18,9 @@
   justify-content: center;
   align-items: center;
   width: 124px;
+  height: 56px;
   min-height: 56px;
+  margin-bottom: 32px;
 
   border: 1px solid #cdcdcd;
   border-radius: 3px;
@@ -24,9 +28,8 @@
 
 .stats__parameter {
   position: absolute;
-  bottom: -15px;
+  bottom: -7px;
 
-  width: 87px;
   padding-right: 5px;
   padding-left: 5px;
 
@@ -38,7 +41,8 @@
 }
 
 .stats__value {
-  padding: 10px;
+  display: block;
+  margin-bottom: 5px;
 
   font-size: 24px;
   line-height: 1;
@@ -52,13 +56,14 @@
   display: flex;
   flex-grow: 1;
   justify-content: center;
-  margin-top: 40px;
 
   font-size: 14px;
   line-height: 1.43;
   font-family: $font-brand;
   text-transform: uppercase;
 }
+
+/* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
   .stats {
@@ -71,17 +76,15 @@
 
   .stats__item {
     width: 162px;
+    min-height: 72px;
     margin-right: 42px;
+    margin-bottom: 0;
   }
 
   .stats__parameter {
-    bottom: -7px;
-
-    width: auto;
-
     font-size: 14px;
 
-    background-color: white;
+    background-color: #ffffff;
   }
 
   .stats__value {
@@ -98,6 +101,8 @@
   }
 }
 
+/* --------- Desktop --------- */
+
 @media (min-width: $desktop-width) {
   .stats__body {
     justify-content: flex-start;
@@ -105,16 +110,22 @@
 
   .stats__item {
     min-height: 72px;
-    margin-bottom: 42px;
+    margin-bottom: 50px;
   }
 
   .stats__item:nth-child(3n) {
     margin-right: 0;
   }
 
+  .stats__parameter {
+    background-color: #f2f2f2;
+  }
+
   .stats__costs {
     flex-grow: 0;
     flex-direction: row;
+    align-items: center;
+    min-height: 40px;
     margin-left: 0;
   }
 }
