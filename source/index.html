@@ -154,11 +154,22 @@
               </table>
             </div>
             <div class="example__slider slider">
-              <img class="slider__image" src="img/before-mobile@1x.png" alt="Толстый котик до перехода на Кэт Энерджи" width="311" height="232">
+              <div class="slider__inner">
+                <picture class="slider__image-container slider__image-container--before">
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                  <img class="slider__image slider__image--before" src="img/before-mobile@1x.png" alt="Толстый котик до перехода на Кэт Энерджи" width="311" height="232">
+                </picture>
+                <picture class="slider__image-container slider__image-container--after">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                  <img class="slider__image slider__image--after" src="img/after-mobile@1x.png" alt="Худой котик после перехода на Кэт Энерджи" width="311" height="232">
+                </picture>
               <div class="slider__controls">
-                <button class="slider__button" type="button">Было</button>
-                <input class="slider__toggle" type="range" name="slider__toggle" id="slider__toggle" min="0" max="1" value="0">
-                <button class="slider__button" type="button">Стало</button>
+                  <button class="slider__button slider__button--before" type="button">Было</button>
+                  <input class="slider__toggle" type="range" name="slider__toggle" id="slider__toggle" min="0" max="100" value="50" aria-label="Слайдер иллюстрирующий состояние кота до и после перехода на Cat Energy">
+                  <button class="slider__button slider__button--after" type="button">Стало</button>
+                </div>
               </div>
             </div>
           </div>
