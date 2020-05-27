@@ -1,11 +1,9 @@
-.page-main {
-  margin: 0 auto;
+.page-main__title {
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 .page-main__inner {
-  width: 320px;
-  max-width: 1300px;
-  margin: 0 auto;
   padding-right: $offset-base;
   padding-left: $offset-base;
 }
@@ -15,14 +13,28 @@
 }
 
 .page-main__objectives {
-  margin-bottom: $offset-base;
+  margin-bottom: 16px;
 }
 
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
+  .page-main {
+    padding-top: 32px;
+  }
+
+  .page-main__title {
+    margin-top: 0;
+    margin-bottom: 55px;
+  }
+
+  .page-main__hero {
+    margin-bottom: 0;
+  }
+
   .page-main__inner {
-    width: $tablet-width;
+    max-width: $tablet-width;
+    margin: 0 auto;
     padding: 0 30px;
   }
 
@@ -36,8 +48,17 @@
 /* --------- Desktop --------- */
 
 @media (min-width: $desktop-width) {
+  .page-main {
+    padding-top: 0;
+  }
+
+  .page-main__title {
+    margin-top: 46px;
+    margin-bottom: 54px;
+  }
+
   .page-main__inner {
-    width: $desktop-width;
+    max-width: $desktop-width;
     padding: 0 40px;
   }
 
