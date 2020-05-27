@@ -26,8 +26,9 @@
 }
 
 .hero__subject {
+  max-width: 280px;
   margin-top: 27px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 
   font-weight: normal;
   font-size: 36px;
@@ -38,7 +39,7 @@
 }
 
 .hero__slogan {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 
   font-size: 14px;
   line-height: 1;
@@ -48,6 +49,7 @@
 }
 
 .hero__image {
+  display: block;
   margin-bottom: 3px;
 }
 
@@ -65,11 +67,13 @@
   .hero {
     align-items: flex-start;
     padding: 0;
-    padding-left: 90px;
+    padding-left: 87px;
   }
 
   .hero__subject {
     max-width: 415px;
+    margin-top: 0;
+    margin-bottom: 41px;
 
     font-size: 60px;
     text-align: left;
@@ -77,6 +81,10 @@
   }
 
   .hero__slogan {
+    margin-top: 0;
+    margin-bottom: 48px;
+    margin-left: 1px;
+
     font-size: 20px;
     color: #111111;
   }
@@ -85,16 +93,29 @@
     display: none;
   }
 
+  .hero__image-wrapper {
+    order: 2;
+    margin-left: -88px;
+  }
+
   .hero__image {
+    position: relative;
+    left: 0;
     z-index: -1;
 
     order: 2;
-    width: 100%;
+    width: 709px;
+    height: 609px;
+    margin-top: -80px;
+    margin-bottom: 0;
+
+    object-fit: contain;
   }
 
   .hero__link {
     align-self: flex-start;
     min-height: 52px;
+    margin-left: 2px;
 
     font-size: 20px;
     line-height: 1;
@@ -110,31 +131,59 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content: flex-start;
     height: 554px;
+    padding-left: 80px;
   }
 
-  .hero__wrapper {
-    margin-left: 80px;
+  .hero__subject {
+    margin-top: 79px;
+  }
+
+  .hero__slogan {
+    margin-bottom: 53px;
+    margin-left: 0;
+  }
+
+  .hero__image-wrapper {
+    margin-left: -45px;
   }
 
   .hero::before {
+    top: 0;
+    right: -70px;
+    left: auto;
+
+    display: block;
+    width: 720px;
+    height: 696px;
+    margin: 0;
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: right;
+    background-size: cover;
+  }
+
+  .hero::after {
+    content: "";
     position: absolute;
     top: 0;
-    max-height: 696px;
     right: 0;
-    background-image: url("../img/index-background-desktop@1x.jpg"),
-      (linear-gradient(to right, #66a93c 0%, #66a93c 50%, #64a73a 50%, #64a73a 100%));
-    background-position: top right;
-    background-size: cover;
-    display: block;
+    z-index: -2;
+
     width: 50vw;
-    height: 100%;
-    margin: 0;
+    height: 696px;
+
+    background-image: linear-gradient(to right, #66a93c 0%, #66a93c 50%, #64a73a 50%, #64a73a 100%);
   }
 
   .hero__image {
     width: 552px;
-    height: 553px;
+    height: 499px;
     margin: 0;
+  }
+
+  .hero__link {
+    margin-left: 0;
   }
 }
