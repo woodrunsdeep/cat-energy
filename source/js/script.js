@@ -1,3 +1,20 @@
+function formValidationStyling() {
+  var inputsList = document.querySelectorAll(".form__text-input"); // Инициализация NodeList
+  var inputsArr = Array.prototype.slice.call(inputsList); // Конвертация NodeList в Array
+  if (inputsList) {
+    inputsArr.forEach(function(input) {
+      input.addEventListener("blur", function() { // Обработчик события потери фокуса
+          if (input.checkValidity()) { // Проверка валидности поля ввода
+            input.classList.remove("form__text-input--error"); // Назначение класса со стилями для невалидных полей
+          } else {
+            input.classList.add("form__text-input--error"); // Удаление класса с валидных полей
+          }
+        },
+        false
+      );
+    });
+  }
+}
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
@@ -11,3 +28,4 @@ function initMap() {
     icon: image
   });
 }
+formValidationStyling();
