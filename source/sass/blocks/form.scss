@@ -32,6 +32,21 @@
   border: none;
 }
 
+.form__contacts {
+  margin-top: 28px;
+  margin-bottom: 33px;
+}
+
+.form__comment {
+  margin-top: 29px;
+  margin-bottom: 34px;
+}
+
+.form__extra {
+  margin-top: 27px;
+  margin-bottom: 35px;
+}
+
 .form__label {
   display: flex;
   align-items: center;
@@ -152,6 +167,21 @@
     flex-grow: 1;
   }
 
+  .form__contacts {
+    margin-top: 76px;
+    margin-bottom: 76px;
+  }
+
+  .form__comment {
+    margin-top: 65px;
+    margin-bottom: 76px;
+  }
+
+  .form__extra {
+    margin-top: 65px;
+    margin-bottom: 57px;
+  }
+
   .form__text {
     max-width: 385px;
 
@@ -221,6 +251,19 @@
 
   .form__fieldset--grow {
     flex-grow: 1;
+  }
+
+  .form__contacts {
+    margin-top: 68px;
+    margin-bottom: 77px;
+  }
+
+  .form__comment {
+    margin-top: 67px;
+  }
+
+  .form__extra {
+    margin-top: 67px;
   }
 
   .form__list--row {
