@@ -143,6 +143,42 @@
   color: $color-dark-gray;
 }
 
+.form__checkbox-icon {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  padding: 5px 2px 6px 4px;
+
+  border: 1px solid #cdcdcd;
+}
+
+.form__checkbox:checked + .form__checkbox-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 22px;
+  height: 17px;
+
+  background-image: url("../img/checkbox-tick.svg");
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+}
+
+.form__label:hover .form__checkbox-icon,
+.form__checkbox:focus + .form__checkbox-icon {
+  border-color: #bababa;
+}
+
+.form__label:active .form__checkbox,
+.form__checkbox:active + .form__checkbox-icon {
+  opacity: 0.3;
+}
+
 /* --------- Tablet Only --------- */
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
@@ -232,6 +268,12 @@
 
     font-size: 16px;
     line-height: 1;
+  }
+
+  .form__checkbox-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 18px;
   }
 }
 
