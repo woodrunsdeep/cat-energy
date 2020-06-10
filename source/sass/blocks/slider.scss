@@ -132,7 +132,6 @@
   position: absolute;
   left: 0;
 
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -141,7 +140,7 @@
 }
 
 .slider__image-container--after {
-  margin-left: 10px;
+  left: 9px;
 }
 
 @media (min-width: $tablet-width) {
