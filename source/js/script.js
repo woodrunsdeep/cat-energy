@@ -46,17 +46,49 @@ function initSlider() {
   }
 }
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 17,
     center: {lat: 59.938826, lng: 30.323212}
   });
 
-  var image = 'https://htmlacademy-adaptive.github.io/1183083-cat-energy-19/8/img/map-pin.png';
-  var customMarker = new google.maps.Marker({
-    position: {lat: 59.938826, lng: 30.323212},
-    map: map,
-    icon: image
+  setMarkers(map);
+}
+
+function setMarkers(map){
+  var image = {
+    url: "../img/map-pin.png",
+    scaledSize: new google.maps.Size(56.5, 53)
+   }
+
+   var customMarker = new google.maps.Marker({
+     position: {lat: 59.938826, lng: 30.323212},
+     map: map,
+     icon: image,
+     title: "HTML Academy"
+   });
+
+   var contentString = '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">Интернет-магазин Кэт Энерджи</h1>'+
+    '<div id="bodyContent">'+
+    '<b>Функциональное питание для котов и кошек!</b>'+
+    '<p><a href="tel:+78127124066">tel: +7-812-712-40-66</a></p>'+
+    '</div>'+
+    '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  customMarker.addListener("click", function() {
+    infowindow.open(map, customMarker);
   });
 }
+
+map.addEventListener("click", function(evt){
+  evt.preventDefault();
+});
+
 formValidationStyling();
 initSlider();
