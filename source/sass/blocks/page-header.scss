@@ -11,9 +11,7 @@
 }
 
 .page-header__logo {
-  margin-bottom: 16px;
-
-  vertical-align: middle;
+  display: inline-flex;
 
   &[href]:hover .page-header__logo-image,
   &[href]:focus .page-header__logo-image {
@@ -35,7 +33,7 @@
 
 @media (min-width: $tablet-width) {
   .page-header__logo {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .page-header {
