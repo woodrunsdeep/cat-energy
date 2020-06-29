@@ -12,15 +12,3 @@
   margin-left: -50vw;
   margin-right: -50vw;
 }
-
-@mixin tablet-only {
-  .tablet-only {
-    display: none;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    .tablet-only {
-      display: block;
-    }
-  }
-}

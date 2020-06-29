@@ -1,25 +1,7 @@
 .stats {
+  display: block;
+
   border-collapse: collapse;
-}
-
-.stats__value {
-  font-size: 24px;
-  line-height: 1;
-  font-family: $font-brand;
-  color: $color-black;
-  text-transform: uppercase;
-}
-
-.stats__parameter {
-  position: absolute;
-  bottom: -15px;
-  background-color: #f2f2f2;
-  font-size: 12px;
-  line-height: 1;
-  width: 87px;
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 .stats__body {
@@ -30,24 +12,120 @@
 
 .stats__item {
   position: relative;
-  min-height: 56px;
-  width: 124px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 124px;
+  height: 56px;
+  min-height: 56px;
+  margin-bottom: 32px;
 
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 }
 
+.stats__parameter {
+  position: absolute;
+  bottom: -7px;
+
+  padding-right: 5px;
+  padding-left: 5px;
+
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+
+  background-color: #f2f2f2;
+}
+
+.stats__value {
+  display: block;
+  margin-bottom: 5px;
+
+  font-size: 24px;
+  line-height: 1;
+  font-family: $font-brand;
+  text-align: center;
+  color: $color-black;
+  text-transform: uppercase;
+}
+
 .stats__costs {
-  margin-top: 40px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+
   font-size: 14px;
   line-height: 1.43;
   font-family: $font-brand;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
+}
+
+/* --------- Tablet --------- */
+
+@media (min-width: $tablet-width) {
+  .stats {
+    display: flex;
+  }
+
+  .stats__body {
+    flex-grow: 1;
+  }
+
+  .stats__item {
+    width: 162px;
+    min-height: 72px;
+    margin-right: 42px;
+    margin-bottom: 0;
+  }
+
+  .stats__parameter {
+    font-size: 14px;
+
+    background-color: #ffffff;
+  }
+
+  .stats__value {
+    font-size: 30px;
+  }
+
+  .stats__costs {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0;
+    margin-left: auto;
+
+    font-size: 20px;
+  }
+}
+
+/* --------- Desktop --------- */
+
+@media (min-width: $desktop-width) {
+  .stats__body {
+    justify-content: flex-start;
+  }
+
+  .stats__item {
+    min-height: 72px;
+    margin-bottom: 50px;
+  }
+
+  .stats__item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .stats__parameter {
+    background-color: #f2f2f2;
+  }
+
+  .stats__costs {
+    flex-grow: 0;
+    flex-direction: row;
+    align-items: center;
+    min-height: 40px;
+    margin-left: 0;
+  }
 }

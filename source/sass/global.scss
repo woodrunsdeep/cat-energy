@@ -16,6 +16,7 @@ body {
   line-height: 1.29;
   font-family: $font-base;
   color: $color-font-base;
+  overflow-x: hidden;
 }
 
 a {
@@ -39,4 +40,12 @@ img {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-@include tablet-only;
+.tablet-only {
+  display: none;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  .tablet-only {
+    display: block;
+  }
+}
