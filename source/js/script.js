@@ -58,16 +58,16 @@ function setMarkers(map){
   var image = {
     url: "../img/map-pin.png",
     scaledSize: new google.maps.Size(56.5, 53)
-   }
+  }
 
-   var customMarker = new google.maps.Marker({
-     position: {lat: 59.938826, lng: 30.323212},
-     map: map,
-     icon: image,
-     title: "HTML Academy"
-   });
+  var customMarker = new google.maps.Marker({
+    position: {lat: 59.938826, lng: 30.323212},
+    map: map,
+    icon: image,
+    title: "HTML Academy"
+  });
 
-   var contentString = '<div id="content">'+
+  var contentString = '<div id="content">'+
     '<div id="siteNotice">'+
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Интернет-магазин Кэт Энерджи</h1>'+
