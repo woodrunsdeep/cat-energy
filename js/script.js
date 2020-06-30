@@ -56,7 +56,7 @@ function initMap() {
 
 function setMarkers(map){
   var image = {
-    url: "../../build/img/map-pin.png",
+    url: "./build/img/map-pin.png",
     scaledSize: new google.maps.Size(56.5, 53)
   }
 
