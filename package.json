@@ -30,10 +30,11 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
+    "eslint": "eslint ./src/**/*.js",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "gulp default"
   },
   "browserslist": [
     "last 2 versions",
