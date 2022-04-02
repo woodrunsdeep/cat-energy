@@ -79,20 +79,12 @@ gulp.task('clean', () => del('build'));
 gulp.task('html', () => gulp.src('source/*.html')
   .pipe(gulp.dest('build')));
 
-gulp.task('picturefill', () => gulp.src('./node_modules/picturefill/dist/picturefill.min.js')
-  .pipe(gulp.dest('build/js')));
-
-gulp.task('svg4everybody', () => gulp.src('./node_modules/svg4everybody/dist/svg4everybody.min.js')
-  .pipe(gulp.dest('build/js')));
-
 gulp.task('build', gulp.series(
   'clean',
   'copy',
   'css',
   'webp',
   'images',
-  'picturefill',
-  'svg4everybody',
   'sprite',
   'html',
 ));

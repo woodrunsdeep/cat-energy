@@ -38,8 +38,8 @@
   },
   "browserslist": [
     "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "not dead",
+    "not ie <= 11"
   ],
   "editorconfig-cli": [
     "*.json",
@@ -56,9 +56,5 @@
   },
   "engines": {
     "node": "8.16"
-  },
-  "dependencies": {
-    "picturefill": "^3.0.3",
-    "svg4everybody": "^2.1.9"
   }
 }
