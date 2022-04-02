@@ -12,7 +12,7 @@ const svgstore = require('gulp-svgstore');
 const del = require('del');
 const webp = require('gulp-webp');
 
-gulp.task('css', () => gulp.src('source/sass/style.scss')
+gulp.task('css', () => gulp.src('src/sass/style.scss')
   .pipe(plumber())
   .pipe(sourcemap.init())
   .pipe(sass())
@@ -22,7 +22,7 @@ gulp.task('css', () => gulp.src('source/sass/style.scss')
   .pipe(csso())
   .pipe(rename('style.min.css'))
   .pipe(sourcemap.write('.'))
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest('dist/css'))
   .pipe(server.stream()));
 
 gulp.task('refresh', (done) => {
@@ -32,52 +32,52 @@ gulp.task('refresh', (done) => {
 
 gulp.task('server', () => {
   server.init({
-    server: 'build/',
+    server: 'dist/',
     notify: false,
     open: true,
     cors: true,
     ui: false,
     browser: 'firefox',
   });
-  gulp.watch('source/sass/**/*.scss', gulp.series('css'));
-  gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'refresh'));
-  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
+  gulp.watch('src/sass/**/*.scss', gulp.series('css'));
+  gulp.watch('src/img/icon-*.svg', gulp.series('sprite', 'refresh'));
+  gulp.watch('src/*.html', gulp.series('html', 'refresh'));
 });
 
-gulp.task('webp', () => gulp.src('build/img/**/*.{png,jpg}')
+gulp.task('webp', () => gulp.src('dist/img/**/*.{png,jpg}')
   .pipe(webp())
-  .pipe(gulp.dest('build/img')));
+  .pipe(gulp.dest('dist/img')));
 
-gulp.task('images', () => gulp.src('build/img/**/*.{png,jpg,svg}')
+gulp.task('images', () => gulp.src('dist/img/**/*.{png,jpg,svg}')
   .pipe(imagemin([
     imagemin.optipng({ optimizationLevel: 3 }),
     imagemin.mozjpeg({ progressive: true }),
     imagemin.svgo(),
   ]))
-  .pipe(gulp.dest('build/img')));
+  .pipe(gulp.dest('dist/img')));
 
-gulp.task('sprite', () => gulp.src('source/img/**/*icon-*.svg')
+gulp.task('sprite', () => gulp.src('src/img/**/*icon-*.svg')
   .pipe(svgstore({
     inlineSvg: true,
   }))
   .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img')));
+  .pipe(gulp.dest('dist/img')));
 
 gulp.task('copy', () => gulp.src([
-  'source/fonts/**/*.{woff,woff2}',
-  'source/img/**',
-  'source/js/**',
-  'source/*.ico',
-  'source/*.html',
+  'src/fonts/**/*.{woff,woff2}',
+  'src/img/**',
+  'src/js/**',
+  'src/*.ico',
+  'src/*.html',
 ], {
-  base: 'source',
+  base: 'src',
 })
-  .pipe(gulp.dest('build')));
+  .pipe(gulp.dest('dist')));
 
-gulp.task('clean', () => del('build'));
+gulp.task('clean', () => del('dist'));
 
-gulp.task('html', () => gulp.src('source/*.html')
-  .pipe(gulp.dest('build')));
+gulp.task('html', () => gulp.src('src/*.html')
+  .pipe(gulp.dest('dist')));
 
 gulp.task('build', gulp.series(
   'clean',
