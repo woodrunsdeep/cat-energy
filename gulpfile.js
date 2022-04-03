@@ -1,18 +1,19 @@
-const gulp = require('gulp');
+// eslint-disable-next-line object-curly-newline
+const { src, dest, series, watch } = require('gulp');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const server = require('browser-sync').create();
+const bsync = require('browser-sync').create();
 const csso = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
-const webp = require('gulp-webp');
+const gwebp = require('gulp-webp');
 
-gulp.task('css', () => gulp.src('src/sass/style.scss')
+const css = () => src('src/sass/style.scss')
   .pipe(plumber())
   .pipe(sourcemap.init())
   .pipe(sass())
@@ -22,48 +23,34 @@ gulp.task('css', () => gulp.src('src/sass/style.scss')
   .pipe(csso())
   .pipe(rename('style.min.css'))
   .pipe(sourcemap.write('.'))
-  .pipe(gulp.dest('dist/css'))
-  .pipe(server.stream()));
+  .pipe(dest('dist/css'))
+  .pipe(bsync.stream());
 
-gulp.task('refresh', (done) => {
-  server.reload();
+const refresh = (done) => {
+  bsync.reload();
   done();
-});
+};
 
-gulp.task('server', () => {
-  server.init({
-    server: 'dist/',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false,
-    browser: 'firefox',
-  });
-  gulp.watch('src/sass/**/*.scss', gulp.series('css'));
-  gulp.watch('src/img/icon-*.svg', gulp.series('sprite', 'refresh'));
-  gulp.watch('src/*.html', gulp.series('html', 'refresh'));
-});
+const webp = () => src('dist/img/**/*.{png,jpg}')
+  .pipe(gwebp())
+  .pipe(dest('dist/img'));
 
-gulp.task('webp', () => gulp.src('dist/img/**/*.{png,jpg}')
-  .pipe(webp())
-  .pipe(gulp.dest('dist/img')));
-
-gulp.task('images', () => gulp.src('dist/img/**/*.{png,jpg,svg}')
+const images = () => src('dist/img/**/*.{png,jpg,svg}')
   .pipe(imagemin([
     imagemin.optipng({ optimizationLevel: 3 }),
     imagemin.mozjpeg({ progressive: true }),
     imagemin.svgo(),
   ]))
-  .pipe(gulp.dest('dist/img')));
+  .pipe(dest('dist/img'));
 
-gulp.task('sprite', () => gulp.src('src/img/**/*icon-*.svg')
+const sprite = () => src('src/img/**/*icon-*.svg')
   .pipe(svgstore({
     inlineSvg: true,
   }))
   .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('dist/img')));
+  .pipe(dest('dist/img'));
 
-gulp.task('copy', () => gulp.src([
+const copy = () => src([
   'src/fonts/**/*.{woff,woff2}',
   'src/img/**',
   'src/js/**',
@@ -72,24 +59,40 @@ gulp.task('copy', () => gulp.src([
 ], {
   base: 'src',
 })
-  .pipe(gulp.dest('dist')));
+  .pipe(dest('dist'));
 
-gulp.task('clean', () => del('dist'));
+const clean = () => del('dist');
 
-gulp.task('html', () => gulp.src('src/*.html')
-  .pipe(gulp.dest('dist')));
+const html = () => src('src/*.html')
+  .pipe(dest('dist'));
 
-gulp.task('build', gulp.series(
-  'clean',
-  'copy',
-  'css',
-  'webp',
-  'images',
-  'sprite',
-  'html',
-));
+const server = () => {
+  bsync.init({
+    server: 'dist/',
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false,
+    browser: 'firefox',
+  });
+  watch('src/sass/**/*.scss', series(css, refresh));
+  watch('src/img/icon-*.svg', series(sprite, refresh));
+  watch('src/*.html', series(html, refresh));
+};
 
-gulp.task('start', gulp.series(
-  'build',
-  'server',
-));
+const build = series(
+  clean,
+  copy,
+  css,
+  webp,
+  images,
+  sprite,
+  html,
+);
+
+exports.build = build;
+
+exports.dev = series(
+  build,
+  server,
+);
