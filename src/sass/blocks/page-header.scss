@@ -12,6 +12,7 @@
 
 .page-header__logo {
   display: inline-flex;
+  padding-bottom: 20px;
 
   &[href]:hover .page-header__logo-image,
   &[href]:focus .page-header__logo-image {
