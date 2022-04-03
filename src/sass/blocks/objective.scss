@@ -51,7 +51,7 @@
     height: 12px;
     margin-left: 12px;
 
-    background-image: url("/img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
   }
 
@@ -59,7 +59,7 @@
   &:focus::after {
     width: 37px;
 
-    background-image: url("/img/icon-right-arrow-verylong.svg");
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 
   &:active::after {
@@ -96,7 +96,7 @@
 
 /* --------- Tablet Only --------- */
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+@media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
   .objective {
     flex-direction: column;
     align-items: flex-start;
