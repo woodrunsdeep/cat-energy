@@ -12,6 +12,7 @@ const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
 const gwebp = require('gulp-webp');
+const htmlmin = require('gulp-htmlmin');
 
 const css = () => src('src/sass/style.scss')
   .pipe(plumber())
@@ -64,6 +65,10 @@ const copy = () => src([
 const clean = () => del('dist');
 
 const html = () => src('src/*.html')
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true,
+  }))
   .pipe(dest('dist'));
 
 const server = () => {
