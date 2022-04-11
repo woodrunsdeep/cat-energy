@@ -56,7 +56,6 @@ const copy = () => src([
   'src/img/**',
   'src/js/**',
   'src/*.ico',
-  'src/*.html',
 ], {
   base: 'src',
 })
