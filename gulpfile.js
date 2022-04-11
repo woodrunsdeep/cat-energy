@@ -13,6 +13,16 @@ const svgstore = require('gulp-svgstore');
 const del = require('del');
 const gwebp = require('gulp-webp');
 const htmlmin = require('gulp-htmlmin');
+const postHTML = require('gulp-posthtml');
+const postHTMLNoRef = require('posthtml-link-noreferrer');
+
+const config = () => ({
+  plugins: [
+    postHTMLNoRef({
+      attr: ['noopener', 'noreferrer'],
+    }),
+  ],
+});
 
 const css = () => src('src/sass/style.scss')
   .pipe(plumber())
@@ -68,6 +78,7 @@ const html = () => src('src/*.html')
     collapseWhitespace: true,
     removeComments: true,
   }))
+  .pipe(postHTML(config))
   .pipe(dest('dist'));
 
 const server = () => {
