@@ -1,25 +1,25 @@
 .map-link__image {
-  display: block;
-  width: 100%;
-  min-height: 400px;
-  margin-top: -44px;
+    display: block;
+    width: 100%;
+    min-height: 400px;
+    margin-top: -44px;
 }
 
 @media (min-width: $desktop-width) {
-  .map-link__image {
-    position: relative;
-    right: 50%;
-    left: 50%;
+    .map-link__image {
+        position: relative;
+        right: 50%;
+        left: 50%;
 
-    width: 1440px;
-    max-width: unset;
-    margin-left: -720px;
-  }
+        width: 1440px;
+        max-width: unset;
+        margin-left: -720px;
+    }
 }
 
 @media (min-width: 1440px) {
-  .map-link__image {
-    width: 100vw;
-    margin-left: -50vw;
-  }
+    .map-link__image {
+        width: 100vw;
+        margin-left: -50vw;
+    }
 }

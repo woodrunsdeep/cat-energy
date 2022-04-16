@@ -1,16 +1,16 @@
 .base-heading {
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 1.67;
-  font-family: $font-brand;
-  color: $color-black;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 1.67;
+    font-family: $font-brand;
+    color: $color-black;
 }
 
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
-  .base-heading {
-    font-size: 60px;
-    line-height: 1;
-  }
+    .base-heading {
+        font-size: 60px;
+        line-height: 1;
+    }
 }

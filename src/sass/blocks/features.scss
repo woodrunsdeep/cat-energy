@@ -1,90 +1,90 @@
 .features {
-  padding-bottom: 22px;
+    padding-bottom: 22px;
 }
 
 .features__title {
-  margin-top: 0;
-  margin-bottom: 28px;
+    margin-top: 0;
+    margin-bottom: 28px;
 }
 
 .features__list {
-  @include list-reset;
+    @include list-reset;
 }
 
 .features__item {
-  margin-bottom: $offset-base;
+    margin-bottom: $offset-base;
 }
 
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
-  .features {
-    padding-top: 28px;
-    padding-bottom: 6px;
-  }
-
-  .features__title {
-    margin-bottom: 36px;
-  }
-
-  .features__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .features__item {
-    position: relative;
-
-    flex-basis: 324px;
-    margin-top: 37px;
-    margin-bottom: 35px;
-
-    &::after {
-      position: absolute;
-      top: -40px;
-      left: 115px;
-      z-index: -1;
-
-      font-size: 281px;
-      line-height: 1;
-      font-family: $font-brand;
-      text-align: left;
-      color: #f2f2f2;
+    .features {
+        padding-top: 28px;
+        padding-bottom: 6px;
     }
-  }
 
-  .features__item:nth-of-type(1)::after {
-    content: "1";
-  }
+    .features__title {
+        margin-bottom: 36px;
+    }
 
-  .features__item:nth-of-type(2)::after {
-    content: "2";
-  }
+    .features__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-  .features__item:nth-of-type(3)::after {
-    content: "3";
-  }
+    .features__item {
+        position: relative;
 
-  .features__item:nth-of-type(4)::after {
-    content: "4";
-  }
+        flex-basis: 324px;
+        margin-top: 37px;
+        margin-bottom: 35px;
+
+        &::after {
+            position: absolute;
+            top: -40px;
+            left: 115px;
+            z-index: -1;
+
+            font-size: 281px;
+            line-height: 1;
+            font-family: $font-brand;
+            text-align: left;
+            color: #f2f2f2;
+        }
+    }
+
+    .features__item:nth-of-type(1)::after {
+        content: "1";
+    }
+
+    .features__item:nth-of-type(2)::after {
+        content: "2";
+    }
+
+    .features__item:nth-of-type(3)::after {
+        content: "3";
+    }
+
+    .features__item:nth-of-type(4)::after {
+        content: "4";
+    }
 }
 
 /* --------- Desktop --------- */
 
 @media (min-width: $desktop-width) {
-  .features {
-    margin-bottom: 0;
-    padding-top: 57px;
-  }
+    .features {
+        margin-bottom: 0;
+        padding-top: 57px;
+    }
 
-  .features__item {
-    flex-basis: 245px;
-    margin-bottom: 0;
-  }
+    .features__item {
+        flex-basis: 245px;
+        margin-bottom: 0;
+    }
 
-  .features__item:last-of-type {
-    margin-right: 0;
-  }
+    .features__item:last-of-type {
+        margin-right: 0;
+    }
 }

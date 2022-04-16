@@ -1,40 +1,40 @@
 .specs {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  border-collapse: collapse;
-  font-size: 12px;
-  line-height: 1.2;
-  color: $color-font-base;
+    border-collapse: collapse;
+    font-size: 12px;
+    line-height: 1.2;
+    color: $color-font-base;
 }
 
 .specs__item {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
-  font-size: 12px;
+    font-size: 12px;
 }
 
 @media (min-width: $tablet-width) {
-  .specs__item {
-    padding-top: 7px;
-    padding-bottom: 6px;
+    .specs__item {
+        padding-top: 7px;
+        padding-bottom: 6px;
 
-    font-size: 16px;
+        font-size: 16px;
 
-    border-bottom: 1px solid #cdcdcd;
-  }
+        border-bottom: 1px solid #cdcdcd;
+    }
 
-  .specs {
-    line-height: 1;
-  }
+    .specs {
+        line-height: 1;
+    }
 
-  .specs tbody {
-    display: block;
-  }
+    .specs tbody {
+        display: block;
+    }
 
-  .specs__text,
-  .specs__value {
-    display: inline-block;
-  }
+    .specs__text,
+    .specs__value {
+        display: inline-block;
+    }
 }

@@ -1,11 +1,11 @@
 @media (min-width: $desktop-width) {
-  .costs__text {
-    display: inline-block;
-    margin-right: 61px;
-  }
+    .costs__text {
+        display: inline-block;
+        margin-right: 61px;
+    }
 
-  .costs__value {
-    display: inline-block;
-    flex-shrink: 0;
-  }
+    .costs__value {
+        display: inline-block;
+        flex-shrink: 0;
+    }
 }

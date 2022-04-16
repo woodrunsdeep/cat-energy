@@ -1,41 +1,41 @@
 .all-products {
-  position: relative;
+    position: relative;
 
-  padding-top: 56px;
-  padding-right: $offset-base;
-  padding-bottom: 25px;
-  padding-left: $offset-base;
+    padding-top: 56px;
+    padding-right: $offset-base;
+    padding-bottom: 25px;
+    padding-left: $offset-base;
 
-  text-align: center;
+    text-align: center;
 
-  border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
 }
 
 .all-products__title {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.25;
-  font-family: $font-brand;
-  text-transform: uppercase;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25;
+    font-family: $font-brand;
+    text-transform: uppercase;
 }
 
 .all-products__text {
-  font-size: 12px;
-  line-height: 1.33;
+    font-size: 12px;
+    line-height: 1.33;
 }
 
 .all-products::before {
-  content: "";
-  position: absolute;
-  top: 25px;
-  left: 50%;
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 50%;
 
-  width: 31px;
-  height: 31px;
+    width: 31px;
+    height: 31px;
 
-  background-image: url("../img/icon-plus-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translateX(-50%);
-  opacity: 0.2;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateX(-50%);
+    opacity: 0.2;
 }

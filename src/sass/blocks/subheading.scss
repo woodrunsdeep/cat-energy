@@ -1,13 +1,13 @@
 .subheading {
-  font-family: $font-brand;
-  font-size: 24px;
-  color: $color-black;
-  font-weight: normal;
-  line-height: 1;
+    font-family: $font-brand;
+    font-size: 24px;
+    color: $color-black;
+    font-weight: normal;
+    line-height: 1;
 }
 
 @media (min-width: $tablet-width) {
-  .subheading {
-    font-size: 36px;
-  }
+    .subheading {
+        font-size: 36px;
+    }
 }

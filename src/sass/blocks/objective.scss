@@ -1,223 +1,223 @@
 .objective {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-top: 24px;
-  padding-right: $offset-base;
-  padding-bottom: 22px;
-  padding-left: $offset-base;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 24px;
+    padding-right: $offset-base;
+    padding-bottom: 22px;
+    padding-left: $offset-base;
 
-  background-color: $color-accent;
+    background-color: $color-accent;
 }
 
 .objective__title {
-  margin: 0;
+    margin: 0;
 
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 1.54;
-  font-family: $font-brand;
-  color: $color-black;
-  text-transform: uppercase;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1.54;
+    font-family: $font-brand;
+    color: $color-black;
+    text-transform: uppercase;
 }
 
 .objective__text {
-  margin-top: 22px;
-  margin-bottom: 19px;
-  padding-bottom: 22px;
+    margin-top: 22px;
+    margin-bottom: 19px;
+    padding-bottom: 22px;
 
-  border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
 }
 
 .objective__link {
-  position: relative;
+    position: relative;
 
-  font-size: 16px;
-  line-height: 1;
-  font-family: $font-brand;
-  color: $color-black;
-  text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1;
+    font-family: $font-brand;
+    color: $color-black;
+    text-transform: uppercase;
 
-  &:active {
-    color: rgba(17, 17, 17, 0.3);
-  }
+    &:active {
+        color: rgba(17, 17, 17, 0.3);
+    }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 2px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
 
-    width: 25px;
-    height: 12px;
-    margin-left: 12px;
+        width: 25px;
+        height: 12px;
+        margin-left: 12px;
 
-    background-image: url("../img/icon-right-arrow-long.svg");
-    background-repeat: no-repeat;
-  }
+        background-image: url("../img/icon-right-arrow-long.svg");
+        background-repeat: no-repeat;
+    }
 
-  &:hover::after,
-  &:focus::after {
-    width: 37px;
+    &:hover::after,
+    &:focus::after {
+        width: 37px;
 
-    background-image: url("../img/icon-right-arrow-verylong.svg");
-  }
+        background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
 
-  &:active::after {
-    opacity: 0.3;
-  }
+    &:active::after {
+        opacity: 0.3;
+    }
 }
 
 .objective__icon {
-  position: relative;
+    position: relative;
 
-  width: 50px;
-  height: 50px;
-  margin-right: 19px;
-  margin-left: 2px;
+    width: 50px;
+    height: 50px;
+    margin-right: 19px;
+    margin-left: 2px;
 
-  background-color: $color-brand;
-  border-radius: 50%;
+    background-color: $color-brand;
+    border-radius: 50%;
 }
 
 .objective__cat-slim,
 .objective__cat-pro {
-  position: absolute;
+    position: absolute;
 }
 
 .objective__cat-slim {
-  bottom: 3px;
-  left: 8px;
+    bottom: 3px;
+    left: 8px;
 }
 
 .objective__cat-pro {
-  bottom: 10px;
-  left: -9px;
+    bottom: 10px;
+    left: -9px;
 }
 
 /* --------- Tablet Only --------- */
 
 @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
-  .objective {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-right: 42px;
-  }
+    .objective {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 42px;
+    }
 
-  .objective__text {
-    flex-grow: 1;
-    margin-top: 14px;
-  }
+    .objective__text {
+        flex-grow: 1;
+        margin-top: 14px;
+    }
 
-  .objective__title {
-    margin-top: 29px;
-    margin-bottom: 10px;
-  }
+    .objective__title {
+        margin-top: 29px;
+        margin-bottom: 10px;
+    }
 
-  .objective__icon {
-    position: absolute;
-    top: 91px;
-    right: 61px;
+    .objective__icon {
+        position: absolute;
+        top: 91px;
+        right: 61px;
 
-    width: 200px;
-    height: 200px;
-    margin: 0;
-  }
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
 }
 
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
-  .objective {
-    position: relative;
+    .objective {
+        position: relative;
 
-    align-content: space-between;
-    min-height: 372px;
-    padding: 47px 52px;
-    padding-bottom: 62px;
-  }
-
-  .objective__title {
-    font-size: 36px;
-    line-height: 1.03;
-  }
-
-  .objective__text {
-    width: 375px;
-    margin-top: 15px;
-
-    font-size: 16px;
-    line-height: 1.5;
-
-    border-bottom: none;
-  }
-
-  .objective__link {
-    margin-top: auto;
-
-    font-size: 20px;
-
-    &::after {
-      top: 5px;
-
-      height: 11px;
-      margin-left: 22px;
+        align-content: space-between;
+        min-height: 372px;
+        padding: 47px 52px;
+        padding-bottom: 62px;
     }
-  }
 
-  .objective__cat-slim {
-    bottom: 18px;
-    left: 29px;
+    .objective__title {
+        font-size: 36px;
+        line-height: 1.03;
+    }
 
-    width: 141px;
-    height: 194px;
-  }
+    .objective__text {
+        width: 375px;
+        margin-top: 15px;
 
-  .objective__cat-pro {
-    bottom: 43px;
-    left: -36px;
+        font-size: 16px;
+        line-height: 1.5;
 
-    width: 268px;
-    height: 113px;
-  }
+        border-bottom: none;
+    }
+
+    .objective__link {
+        margin-top: auto;
+
+        font-size: 20px;
+
+        &::after {
+            top: 5px;
+
+            height: 11px;
+            margin-left: 22px;
+        }
+    }
+
+    .objective__cat-slim {
+        bottom: 18px;
+        left: 29px;
+
+        width: 141px;
+        height: 194px;
+    }
+
+    .objective__cat-pro {
+        bottom: 43px;
+        left: -36px;
+
+        width: 268px;
+        height: 113px;
+    }
 }
 
 /* --------- Desktop --------- */
 
 @media (min-width: $desktop-width) {
-  .objective {
-    width: 570px;
-  }
+    .objective {
+        width: 570px;
+    }
 
-  .objective__title {
-    margin-bottom: 4px;
-  }
+    .objective__title {
+        margin-bottom: 4px;
+    }
 
-  .objective__text {
-    width: auto;
-    margin-top: 30px;
-    margin-bottom: 0;
-  }
+    .objective__text {
+        width: auto;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
 
-  .objective__icon {
-    width: 100px;
-    height: 100px;
-    margin-right: 62px;
-    margin-left: 0;
-  }
+    .objective__icon {
+        width: 100px;
+        height: 100px;
+        margin-right: 62px;
+        margin-left: 0;
+    }
 
-  .objective__cat-slim {
-    bottom: 9px;
-    left: 13px;
+    .objective__cat-slim {
+        bottom: 9px;
+        left: 13px;
 
-    width: 71px;
-    height: 97px;
-  }
+        width: 71px;
+        height: 97px;
+    }
 
-  .objective__cat-pro {
-    bottom: 21px;
-    left: -18px;
+    .objective__cat-pro {
+        bottom: 21px;
+        left: -18px;
 
-    width: 134px;
-    height: 57px;
-  }
+        width: 134px;
+        height: 57px;
+    }
 }
