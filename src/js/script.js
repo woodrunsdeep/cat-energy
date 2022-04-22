@@ -14,21 +14,21 @@ navToggle.addEventListener('click', () => {
 });
 
 function formValidationStyling() {
-  const inputsList = document.querySelectorAll('.form__text-input'); // Инициализация NodeList
-  const inputsArr = Array.prototype.slice.call(inputsList); // Конвертация NodeList в Array
-  if (inputsList) {
-    inputsArr.forEach((input) => {
-      input.addEventListener('blur', () => { // Обработчик события потери фокуса
-        if (input.checkValidity()) { // Проверка валидности поля ввода
-          input.classList.remove('form__text-input--error'); // Назначение класса со стилями для невалидных полей
+  const inputs = document.querySelectorAll('.form__text-input');
+  if (inputs) {
+    inputs.forEach((input) => {
+      input.addEventListener('blur', () => {
+        if (input.checkValidity()) {
+          input.classList.remove('form__text-input--error');
         } else {
-          input.classList.add('form__text-input--error'); // Удаление класса с валидных полей
+          input.classList.add('form__text-input--error');
         }
       },
       false);
     });
   }
 }
+
 function initSlider() {
   const fatCat = document.querySelector('.slider__image-container--before');
   const buttonBefore = document.querySelector('.slider__button--before');
