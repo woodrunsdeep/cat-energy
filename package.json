@@ -25,6 +25,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^2.1.0",
     "gulp-webp": "^4.0.1",
     "husky": "^7.0.4",
     "posthtml-link-noreferrer": "^1.0.10",

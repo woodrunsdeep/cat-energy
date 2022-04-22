@@ -15,6 +15,7 @@ const gwebp = require('gulp-webp');
 const htmlmin = require('gulp-htmlmin');
 const postHTML = require('gulp-posthtml');
 const postHTMLNoRef = require('posthtml-link-noreferrer');
+const terser = require('gulp-terser');
 
 const config = () => ({
   plugins: [
@@ -80,6 +81,10 @@ const html = () => src('src/*.html')
   }))
   .pipe(postHTML(config))
   .pipe(dest('dist'));
+
+const compressJs = () => src('src/js/**/*.js')
+  .pipe(terser())
+  .pipe(dest('dist/js'));
 
 const server = () => {
   bsync.init({
