@@ -63,6 +63,16 @@
     text-transform: uppercase;
 }
 
+/* Mobile only */
+
+@media (max-width: $mobile-width-only) {
+    .stats__parameter {
+        bottom: -16px;
+
+        max-width: 70px;
+    }
+}
+
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
