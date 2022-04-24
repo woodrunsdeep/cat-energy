@@ -27,6 +27,7 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-terser": "^2.1.0",
     "gulp-webp": "^4.0.1",
+    "html-minifier": "^4.0.0",
     "husky": "^7.0.4",
     "sass": "^1.49.11",
     "stylelint": "10.1.x",
