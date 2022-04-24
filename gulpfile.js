@@ -54,8 +54,6 @@ const sprite = () => src('src/img/**/*icon-*.svg')
 const copy = () => src([
   'src/fonts/**/*.{woff,woff2}',
   'src/img/**',
-  'src/js/**',
-  'src/*.ico',
 ], {
   base: 'src',
 })
