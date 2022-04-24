@@ -1,5 +1,5 @@
 // eslint-disable-next-line object-curly-newline
-const { src, dest, series, watch } = require('gulp');
+const { src, dest, series, parallel, watch } = require('gulp');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
@@ -98,11 +98,13 @@ const server = () => {
 const build = series(
   clean,
   copy,
-  css,
-  webp,
-  images,
-  sprite,
-  html,
+  parallel([
+    images,
+    webp,
+    css,
+    sprite,
+    compressJs,
+  ]),
 );
 
 exports.build = build;
