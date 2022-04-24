@@ -1,0 +1,28 @@
+<nav class="main-nav main-nav--closed main-nav--no-js">
+    <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+            {% for item in collections.all | eleventyNavigation %}
+            {% if item.url == page.url %}
+                {% set currentPage = true %}
+            {% else %}
+                {% set currentPage = false %}
+            {% endif %}
+            <li class="main-nav__item">
+                <a
+                    {% if currentPage %}
+                        class="main-nav__link main-nav__link--current {{ 'main-nav__link--inverse' if navInversed }}"
+                        aria-current="page"
+                    {% else %}
+                        class="main-nav__link {{ 'main-nav__link--inverse' if navInversed }}"
+                        href="{{ item.url }}"
+                    {% endif %}>
+                    {{ item.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

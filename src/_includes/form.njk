@@ -1,0 +1,136 @@
+<form class="page-main__form form" action="https://echo.htmlacademy.ru" method="post">
+    <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <div class="form__wrapper">
+        <fieldset class="form__fieldset">
+            <legend class="visually-hidden">Личные данные питомца</legend>
+            <ul class="form__list">
+                <li class="form__list-item">
+                    <label class="form__label">
+                        <span class="form__label-text">Имя:*</span>
+                        <input class="form__text-input" type="text" required name="name" placeholder="Барсик">
+                    </label>
+                </li>
+                <li class="form__list-item">
+                    <label class="form__label">
+                        <span class="form__label-text">Вес (кг):*</span>
+                        <input class="form__text-input" type="number" required
+                                name="weight" placeholder="7" min="0" step="0.1">
+                    </label>
+                </li>
+                <li class="form__list-item">
+                    <label class="form__label">
+                        <span class="form__label-text">Возраст (лет):</span>
+                        <input class="form__text-input" type="number"
+                                name="age" placeholder="7" step="0.5">
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset class="form__fieldset">
+            <legend class="visually-hidden">Цель</legend>
+            <ul class="form__objectives">
+                <li class="form__objective">
+                    <label class="form__label">
+                        <input class="form__radio-input visually-hidden" type="radio"
+                                name="objective" value="weight-loss" checked>
+                        <svg class="radio-button" height="30" width="30" aria-hidden="true" focusable="false">
+                            <circle class="radio-button__body" cx="50%" cy="50%" r="48%" fill="transparent" stroke-width="1" stroke="#cdcdcd"></circle>
+                            <circle class="radio-button__dot" cx="50%" cy="50%" r="6" fill="transparent">
+                            </circle>
+                        </svg>
+                        <span class="form__radio" aria-hidden="true"></span>
+                        Похудение
+                    </label>
+                </li>
+                <li class="form__objective">
+                    <label class="form__label">
+                        <input class="form__radio-input visually-hidden" type="radio"
+                                name="objective" value="weight-gain">
+                        <svg class="radio-button" height="30" width="30" aria-hidden="true" focusable="false">
+                            <circle class="radio-button__body" cx="50%" cy="50%" r="48%" fill="transparent" stroke-width="1" stroke="#cdcdcd"></circle>
+                            <circle class="radio-button__dot" cx="50%" cy="50%" r="20%" fill="transparent"></circle>
+                        </svg>
+                        <span class="form__radio" aria-hidden="true"></span>
+                        Набор массы
+                    </label>
+                </li>
+                <li class="form__objective">
+                    <label class="form__label">
+                        <input class="form__radio-input visually-hidden" type="radio"
+                                name="objective" value="advice-needed">
+                        <svg class="radio-button" height="30" width="30" aria-hidden="true" focusable="false">
+                            <circle class="radio-button__body" cx="50%" cy="50%" r="48%" fill="transparent" stroke-width="1" stroke="#cdcdcd"></circle>
+                            <circle class="radio-button__dot" cx="50%" cy="50%" r="20%" fill="transparent"></circle>
+                        </svg>
+                        <span class="form__radio" aria-hidden="true"></span>
+                        Не знаю (Нужен ваш совет)
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--grow">
+            <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
+            <p class="form__contacts subheading" aria-hidden="true">Контактные данные (владельца кота)</p>
+            <ul class="form__list form__list--row">
+                <li class="form__list-item">
+                    <label class="form__label">
+                        <span class="form__label-text">E-mail:*</span>
+                        <input class="form__text-input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                        <svg class="form__label-icon" width="20" height="13" aria-hidden="true" focusable="false">
+                            <use xlink:href="/img/sprite.svg#icon-mail"></use>
+                        </svg>
+                    </label>
+                </li>
+                <li class="form__list-item">
+                    <label class="form__label">
+                        <span class="form__label-text">Телефон:*</span>
+                        <input class="form__text-input" type="tel" name="telephone" placeholder="8 (960) 900-60-90" required>
+                        <svg class="form__label-icon" width="20" height="20" aria-hidden="true" focusable="false">
+                            <use xlink:href="/img/sprite.svg#icon-phone"></use>
+                        </svg>
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+    <label class="form__textarea-label">
+        <span class="form__comment subheading">Комментарий</span>
+        <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+    </label>
+    <fieldset class="form__fieldset">
+        <legend class="visually-hidden">Дополнительно</legend>
+        <p class="form__extra subheading" aria-hidden="true">Дополнительно</p>
+        <ul class="form__extra-products">
+            <li class="form__extra-product">
+                <label class="form__label">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="sweetener" checked>
+                    <span class="form__checkbox-icon" aria-hidden="true"></span>
+                    Сахарозаменитель
+                </label>
+            </li>
+            <li class="form__extra-product">
+                <label class="form__label">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="drinking-water">
+                    <span class="form__checkbox-icon" aria-hidden="true"></span>
+                    Питьевая вода
+                </label>
+            </li>
+            <li class="form__extra-product">
+                <label class="form__label">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="milk">
+                    <span class="form__checkbox-icon" aria-hidden="true"></span>
+                    Молоко
+                </label>
+            </li>
+            <li class="form__extra-product">
+                <label class="form__label">
+                    <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins">
+                    <span class="form__checkbox-icon" aria-hidden="true"></span>
+                    Витамины
+                </label>
+            </li>
+        </ul>
+    </fieldset>
+    <button class="form__button button" type="submit">Отправить заявку</button>
+    <small class="form__legend">* — Обязательные поля</small>
+</form>
