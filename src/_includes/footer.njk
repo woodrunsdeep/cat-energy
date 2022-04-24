@@ -12,22 +12,22 @@
         <a id="map" class="page-footer__map map-link" href="https://goo.gl/maps/5y6q4TU5HUWg9hCh6" target="_blank">
             <picture>
                 <source type=image/webp media="(min-width: 1300px)"
-                        srcset="/img/bg-map-desktop@1x.webp 1x,
-                                /img/bg-map-desktop@2x.webp 2x">
+                        srcset="{{ '/img/bg-map-desktop@1x.webp' | url }} 1x,
+                                {{ '/img/bg-map-desktop@2x.webp' | url }} 2x">
                 <source type=image/webp media="(min-width: 768px)"
-                        srcset="/img/bg-map-tablet@1x.webp 1x,
-                                /img/bg-map-tablet@2x.webp 2x">
+                        srcset="{{ '/img/bg-map-tablet@1x.webp' | url }} 1x,
+                                {{ '/img/bg-map-tablet@2x.webp' | url }} 2x">
                 <source type=image/webp
-                        srcset="/img/bg-map-mobile@1x.webp 1x,
-                                /img/bg-map-mobile@2x.webp 2x">
+                        srcset="{{ '/img/bg-map-mobile@1x.webp' | url }} 1x,
+                                {{ '/img/bg-map-mobile@2x.webp' | url }} 2x">
                 <source media="(min-width: 1300px)"
-                        srcset="/img/bg-map-desktop@1x.png 1x,
-                                /img/bg-map-desktop@2x.png 2x">
+                        srcset="{{ '/img/bg-map-desktop@1x.png' | url }} 1x,
+                                {{ '/img/bg-map-desktop@2x.png' | url }} 2x">
                 <source media="(min-width: 768px)"
-                        srcset="/img/bg-map-tablet@1x.png 1x,
-                                /img/bg-map-tablet@2x.png 2x">
-                <img class="map-link__image" src="/img/bg-map-mobile@1x.png"
-                        srcset="/img/bg-map-mobile@2x.png"
+                        srcset="{{ '/img/bg-map-tablet@1x.png' | url }} 1x,
+                                {{ '/img/bg-map-tablet@2x.png' | url }} 2x">
+                <img class="map-link__image" src="{{ '/img/bg-map-mobile@1x.png' | url }}"
+                        srcset="{{ '/img/bg-map-mobile@2x.png' | url }}"
                         width="320"height="400"
                         alt="Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8">
             </picture>
@@ -36,27 +36,27 @@
     <div class="page-footer__bottom">
         <div class="page-footer__bottom-inner">
             <a class="page-footer__logo">
-                <img class="page-footer__logo-image" src="/img/logo-footer.svg" width="128" height="24" alt="Текстовый логотип Кэт Энерджи">
+                <img class="page-footer__logo-image" src="{{ '/img/logo-footer.svg' | url }}" width="128" height="24" alt="Текстовый логотип Кэт Энерджи">
             </a>
             <ul class="page-footer__socials socials">
                 <li class="socials__item">
                     <a class="socials__link" href="https://vk.com/htmlacademy" target="_blank" aria-label="Мы во Вконтакте">
                         <svg class="socials__icon socials__icon--vk" width="22" height="12" aria-hidden="true" focusable="false">
-                            <use xlink:href="/img/sprite.svg#icon-vk"></use>
+                            <use xlink:href="{{ '/img/sprite.svg#icon-vk' | url }}"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="socials__item">
                     <a class="socials__link" href="https://instagram.com/htmlacademy" target="_blank" aria-label="Мы в Инстаграме">
                         <svg class="socials__icon socials__icon--ig" width="16" height="16" aria-hidden="true" focusable="false">
-                            <use xlink:href="/img/sprite.svg#icon-insta"></use>
+                            <use xlink:href="{{ '/img/sprite.svg#icon-insta' | url }}"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="socials__item">
                     <a class="socials__link" href="https://facebook.com/htmlacademy" target="_blank" aria-label="Мы в Фэйсбуке">
                         <svg class="socials__icon socials__icon--fb" width="20" height="19" aria-hidden="true" focusable="false">
-                            <use xlink:href="/img/sprite.svg#icon-fb"></use>
+                            <use xlink:href="{{ '/img/sprite.svg#icon-fb' | url }}"></use>
                         </svg>
                     </a>
                 </li>
@@ -67,7 +67,7 @@
                     <span class="visually-hidden">Профессиональный онлайн‑курс HTML и CSS, уровень 2</span>
                     <svg class="copyright__logo" width="27" height="34" aria-labelledby="htmlacademy-logo-title" role="img">
                         <title id="htmlacademy-logo-title">Логотип Академии в виде геральдического щита с изображением академической шапки</title>
-                        <use xlink:href="/img/sprite.svg#icon-htmlacademy"></use>
+                        <use xlink:href="{{ '/img/sprite.svg#icon-htmlacademy' | url }}"></use>
                     </svg>
                 </a>
             </div>
