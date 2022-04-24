@@ -36,7 +36,7 @@ const webp = () => src('dist/img/**/*.{png,jpg}')
   .pipe(gwebp())
   .pipe(dest('dist/img'));
 
-const images = () => src('dist/img/**/*.{png,jpg,svg}')
+const images = () => src('dist/img/**/*.{png,jpg,svg,ico}')
   .pipe(imagemin([
     imagemin.optipng({ optimizationLevel: 3 }),
     imagemin.mozjpeg({ progressive: true }),
