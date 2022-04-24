@@ -12,17 +12,7 @@ const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
 const gwebp = require('gulp-webp');
-const postHTML = require('gulp-posthtml');
-const postHTMLNoRef = require('posthtml-link-noreferrer');
 const terser = require('gulp-terser');
-
-const config = () => ({
-  plugins: [
-    postHTMLNoRef({
-      attr: ['noopener', 'noreferrer'],
-    }),
-  ],
-});
 
 const css = () => src('src/sass/style.scss')
   .pipe(plumber())
@@ -73,10 +63,6 @@ const copy = () => src([
 
 const clean = () => del('dist');
 
-const html = () => src('src/*.html')
-  .pipe(postHTML(config))
-  .pipe(dest('dist'));
-
 const compressJs = () => src('src/js/**/*.js')
   .pipe(terser())
   .pipe(dest('dist/js'));
@@ -92,7 +78,6 @@ const server = () => {
   });
   watch('src/sass/**/*.scss', series(css, refresh));
   watch('src/img/icon-*.svg', series(sprite, refresh));
-  watch('src/*.html', series(html, refresh));
 };
 
 const build = series(
