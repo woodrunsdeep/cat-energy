@@ -1,0 +1,28 @@
+{
+    "name": "Cat Energy",
+    "lang": "ru",
+    "start_url": "/",
+    "display": "standalone",
+    "scope": "/",
+    "orientation": "any",
+    "background_color": "white",
+    "description": "Интернет-магазин кормов для кошек",
+    "icons": [{
+      "src": "/img/favicons/favicon-160.png",
+      "sizes": "160x160",
+      "type": "image/png"
+    }, {
+      "src": "/img/favicons/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }, {
+      "src": "/img/favicons/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }, {
+      "src": "/img/favicons/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }]
+  }
