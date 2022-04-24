@@ -1,6 +1,6 @@
 <header class="page-header">
     <div class="page-header__inner">
-        <a class="page-header__logo" {{ "href=" + "/" | url if page.url !== '/' | url }}>
+        <a class="page-header__logo" {{ 'href=' + '/' | url if page.url !== '/' }}>
             <picture>
                 <source media="(min-width: 1300px)" srcset="{{ '/img/logo-desktop.svg' | url }}">
                 <source media="(min-width: 768px)" srcset="{{ '/img/logo-tablet.svg' | url }}">
