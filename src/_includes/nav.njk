@@ -17,9 +17,9 @@
                         aria-current="page"
                     {% else %}
                         class="main-nav__link {{ 'main-nav__link--inverse' if navInversed }}"
-                        href="{{ item.url }}"
+                        href="{{ item.url | url }}"
                     {% endif %}>
-                    {{ item.title }}
+                    {{ item.title | url }}
                 </a>
             </li>
             {% endfor %}

@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи {% if page.url != '/' %} – {{ title }} {% endif %}</title>
-    <link rel="stylesheet" href="/css/style.min.css">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="icon" type="image/png" sizes="160x160" href="/img/favicons/favicon-160.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16.png">
-    <link rel="icon" type="image/svg+xml" sizes="any" href="/img/favicons/favicon.svg">
+    <link rel="stylesheet" href="{{ '/css/style.min.css' | url}}">
+    <link rel="manifest" href="{{ '/manifest.json' | url}}">
+    <link rel="preload" href="{{ '/fonts/oswaldmedium.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/fonts/oswaldregular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" type="image/png" sizes="160x160" href="{{ '/img/favicons/favicon-160.png' | url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicons/favicon-32.png' | url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicons/favicon-16.png' | url }}">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="{{ '/img/favicons/favicon.svg' | url }}">
 </head>
 <body>
     {% include "header.njk" %}
@@ -24,6 +24,6 @@
 
     {% include "footer.njk" %}
 
-    <script src="/js/script.js"></script>
+    <script src="{{ '/js/script.js' | url }}"></script>
 </body>
 </html>
