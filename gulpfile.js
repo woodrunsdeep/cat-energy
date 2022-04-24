@@ -12,7 +12,6 @@ const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
 const gwebp = require('gulp-webp');
-const htmlmin = require('gulp-htmlmin');
 const postHTML = require('gulp-posthtml');
 const postHTMLNoRef = require('posthtml-link-noreferrer');
 const terser = require('gulp-terser');
@@ -75,10 +74,6 @@ const copy = () => src([
 const clean = () => del('dist');
 
 const html = () => src('src/*.html')
-  .pipe(htmlmin({
-    collapseWhitespace: true,
-    removeComments: true,
-  }))
   .pipe(postHTML(config))
   .pipe(dest('dist'));
 
