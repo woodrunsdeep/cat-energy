@@ -1,9 +1,12 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const safeLinks = require('@sardine/eleventy-plugin-external-links');
+
 
 module.exports = function(config) {
     config.addPassthroughCopy('src/manifest.json');
 
     config.addPlugin(eleventyNavigationPlugin);
+    config.addPlugin(safeLinks);
 
     config.addTransform('htmlmin', (content, outputPath) => {
         if(outputPath && outputPath.endsWith('.html')) {
