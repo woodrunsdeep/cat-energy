@@ -2,9 +2,9 @@
     <div class="page-header__inner">
         <a class="page-header__logo" {{ 'href=' + '/' | url if page.url !== '/' }}>
             <picture>
-                <source media="(min-width: 1300px)" srcset="{{ '/img/logo-desktop.svg' | url }}">
-                <source media="(min-width: 768px)" srcset="{{ '/img/logo-tablet.svg' | url }}">
-                <img class="page-header__logo-image" src="{{ '/img/logo-mobile.svg' | url }}" alt="Логотип компании с изображением котика" width="191" height="39">
+                <source media="(min-width: 1300px)" srcset="/img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
+                <img class="page-header__logo-image" src="/img/logo-mobile.svg" alt="Логотип компании с изображением котика" width="191" height="39">
             </picture>
         </a>
         {% include "nav.njk" %}

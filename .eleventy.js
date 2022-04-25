@@ -33,6 +33,5 @@ module.exports = function(config) {
         templateFormats: [
             'md', 'njk'
         ],
-        pathPrefix: "/cat-energy/"
     };
 }
