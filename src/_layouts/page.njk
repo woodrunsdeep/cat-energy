@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Academy: Кэт энерджи {% if page.url != '/' %} – {{ title }} {% endif %}</title>
+    <meta name="description" content="{{ preview or site.description }}">
+    <title>{{ site.title }} {{ '– ' + title if page.url != '/' }}</title>
     <link rel="stylesheet" href="/css/style.min.css">
     <link rel="manifest" href="/manifest.json">
     <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
