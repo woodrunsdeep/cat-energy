@@ -1,0 +1,29 @@
+{% set config = {
+    "formats": [
+        "webp", "png"
+    ],
+    "breakpoints": {
+        "desktop": "1300px",
+        "tablet": "768px",
+        "mobile": "320px"
+    }
+} %}
+
+{% macro picture(img, classes) %}
+    <picture>
+        {% for format in config.formats %}
+            {% for key, breakpoint in config.breakpoints %}
+                <source type=image/{{ format }} media="(min-width: {{ breakpoint }})"
+                    srcset="{{ img.src }}-{{ key }}@1x.{{ format }} 1x,
+                            {{ img.src }}-{{ key }}@2x.{{ format }} 2x">
+            {% endfor %}
+        {% endfor %}
+        <img
+            class="{{ classes }}"
+            srcset="{{ img.src }}-mobile@2x.jpg"
+            src="{{ img.src }}-mobile@1x.jpg"
+            width="{{ img.width }}"
+            height="{{ img.height }}"
+            alt="{{ img.alt }}">
+    </picture>
+{% endmacro %}
