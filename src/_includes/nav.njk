@@ -4,7 +4,7 @@
     </button>
     <div class="main-nav__wrapper">
         <ul class="main-nav__list">
-            {% for item in collections.all | eleventyNavigation %}
+            {% for item in collections.pages | eleventyNavigation %}
             {% if item.url == page.url %}
                 {% set currentPage = true %}
             {% else %}
