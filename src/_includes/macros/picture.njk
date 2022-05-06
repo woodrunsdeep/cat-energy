@@ -9,21 +9,21 @@
     }
 } %}
 
-{% macro picture(img, classes) %}
+{% macro picture(classes, imgSrc, imgWidth, imgHeight, imgAlt) %}
     <picture>
         {% for format in config.formats %}
             {% for key, breakpoint in config.breakpoints %}
                 <source type=image/{{ format }} media="(min-width: {{ breakpoint }})"
-                    srcset="{{ img.src }}-{{ key }}@1x.{{ format }} 1x,
-                            {{ img.src }}-{{ key }}@2x.{{ format }} 2x">
+                    srcset="{{ imgSrc }}-{{ key }}@1x.{{ format }} 1x,
+                            {{ imgSrc }}-{{ key }}@2x.{{ format }} 2x">
             {% endfor %}
         {% endfor %}
         <img
             class="{{ classes }}"
-            srcset="{{ img.src }}-mobile@2x.jpg"
-            src="{{ img.src }}-mobile@1x.jpg"
-            width="{{ img.width }}"
-            height="{{ img.height }}"
-            alt="{{ img.alt }}">
+            srcset="{{ imgSrc }}-mobile@2x.jpg"
+            src="{{ imgSrc }}-mobile@1x.jpg"
+            width="{{ imgWidth }}"
+            height="{{ imgHeight }}"
+            alt="{{ imgAlt }}">
     </picture>
 {% endmacro %}
