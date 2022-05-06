@@ -25,13 +25,7 @@
     margin-bottom: 14px;
 }
 
-.extra-product__quantity {
-    margin: 0;
-
-    line-height: 1;
-}
-
-.extra-product__price {
+.extra-product__feature {
     margin: 0;
 
     line-height: 1;
@@ -67,16 +61,8 @@
         margin-bottom: 0;
     }
 
-    .extra-product__quantity {
+    .extra-product__feature {
         min-width: 130px;
-
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: right;
-    }
-
-    .extra-product__price {
-        min-width: 94px;
 
         font-size: 16px;
         line-height: 1.5;
@@ -112,13 +98,7 @@
         min-width: 286px;
     }
 
-    .extra-product__quantity {
-        text-align: left;
-    }
-
-    .extra-product__price {
-        min-width: 43px;
-
+    .extra-product__feature {
         font-size: 16px;
         text-align-last: left;
     }

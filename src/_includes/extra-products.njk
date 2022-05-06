@@ -2,54 +2,21 @@
     <h2 class="extra-products__title subheading">Дополнительные товары</h2>
     <div class="extra-products__inner">
         <ul class="extra-products__list">
-            <li class="extra-products__item">
-                <article class="extra-product">
-                    <div class="extra-product__content">
-                        <h3 class="extra-product__title">Сахарозаменитель</h3>
-                        <div class="extra-product__details">
-                            <p class="extra-product__quantity">1 упаковка (100 г)</p>
-                            <p class="extra-product__price">200 Р.</p>
+            {% for product in products.secondary %}
+                <li class="extra-products__item">
+                    <article class="extra-product">
+                        <div class="extra-product__content">
+                            <h3 class="extra-product__title">{{ product.name }}</h3>
+                            <div class="extra-product__details">
+                                {% for item in product.specs %}
+                                    <p class="extra-product__feature">{{ item.value | safe }}</p>
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
-                    <a class="extra-product__link button" href="checkout.html">Заказать</a>
-                </article>
-            </li>
-            <li class="extra-products__item">
-                <article class="extra-product">
-                    <div class="extra-product__content">
-                        <h3 class="extra-product__title">Питьевая вода</h3>
-                        <div class="extra-product__details">
-                            <p class="extra-product__quantity">5 литров</p>
-                            <p class="extra-product__price">50 Р.</p>
-                        </div>
-                    </div>
-                    <a class="extra-product__link button" href="checkout.html">Заказать</a>
-                </article>
-            </li>
-            <li class="extra-products__item">
-                <article class="extra-product">
-                    <div class="extra-product__content">
-                        <h3 class="extra-product__title">Молоко</h3>
-                        <div class="extra-product__details">
-                            <p class="extra-product__quantity">1 литр</p>
-                            <p class="extra-product__price">100 Р.</p>
-                        </div>
-                    </div>
-                    <a class="extra-product__link button" href="checkout.html">Заказать</a>
-                </article>
-            </li>
-            <li class="extra-products__item">
-                <article class="extra-product">
-                    <div class="extra-product__content">
-                        <h3 class="extra-product__title">Витамины</h3>
-                        <div class="extra-product__details">
-                            <p class="extra-product__quantity">1 упаковка (30 г)</p>
-                            <p class="extra-product__price">300 Р.</p>
-                        </div>
-                    </div>
-                    <a class="extra-product__link button" href="checkout.html">Заказать</a>
-                </article>
-            </li>
+                        <a class="extra-product__link button" href="checkout.html">Заказать</a>
+                    </article>
+                </li>
+            {% endfor %}
         </ul>
         <div class="extra-products__bonus bonus">
             <svg class="bonus__icon" width="56" height="60" aria-hidden="true" focusable="false">
