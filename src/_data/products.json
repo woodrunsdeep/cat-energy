@@ -1,0 +1,237 @@
+{
+  "primary": [
+    {
+      "name": "Cat Energy PRO 500&nbsp;г",
+      "primary": true,
+      "link": "cat-energy-chicken-small.html",
+      "specs": [
+        {
+          "param": "Вес",
+          "value": "500&nbsp;г"
+        },
+        {
+          "param": "Вкус",
+          "value": "Курица"
+        },
+        {
+          "param": "Цена",
+          "value": "700 Р."
+        }
+      ],
+      "img": {
+        "src": "/img/chicken-small",
+        "alt": "Cat Energy PRO 500 г с курицей в пластиковом стакане оранжевого цвета",
+        "width": "140",
+        "height": "144"
+      }
+    },
+    {
+      "name": "Cat Energy PRO 1000&nbsp;г",
+      "primary": true,
+      "link": "cat-energy-chicken-big.html",
+      "specs": [
+        {
+          "param": "Вес",
+          "value": "1000&nbsp;г"
+        },
+        {
+          "param": "Вкус",
+          "value": "Курица"
+        },
+        {
+          "param": "Цена",
+          "value": "1000 Р."
+        }
+      ],
+      "img": {
+        "src": "/img/chicken-big",
+        "alt": "Cat Energy PRO 1000 г с курицей в пластиковом стакане оранжевого цвета",
+        "width": "140",
+        "height": "144"
+      }
+    },
+    {
+      "name": "Cat Energy PRO 500&nbsp;г",
+      "primary": true,
+      "link": "cat-energy-fish-small.html",
+      "specs": [
+        {
+          "param": "Вес",
+          "value": "500&nbsp;г"
+        },
+        {
+          "param": "Вкус",
+          "value": "Рыба"
+        },
+        {
+          "param": "Цена",
+          "value": "700 Р."
+        }
+      ],
+      "img": {
+        "src": "/img/fish-small",
+        "alt": "Cat Energy PRO 1000 г с рыбой в пластиковом стакане зеленого цвета",
+        "width": "140",
+        "height": "144"
+      }
+    },
+    {
+      "name": "Cat Energy PRO 1000&nbsp;г",
+      "primary": true,
+      "link": "cat-energy-fish-big.html",
+      "specs": [
+        {
+          "param": "Вес",
+          "value": "1000&nbsp;г"
+        },
+        {
+          "param": "Вкус",
+          "value": "Рыба"
+        },
+        {
+          "param": "Цена",
+          "value": "1000 Р."
+        }
+      ],
+      "img": {
+        "src": "/img/fish-big",
+        "alt": "Cat Energy PRO 1000 г с рыбой в пластиковом стакане зеленого цвета",
+        "width": "140",
+        "height": "144"
+      }
+    },
+    {
+      "name": "Cat Energy Slim 500&nbsp;г",
+      "primary": true,
+      "link": "cat-energy-buckwheat-small.html",
+      "specs": [
+        {
+          "param": "Вес",
+          "value": "500&nbsp;г"
+        },
+        {
+          "param": "Вкус",
+          "value": "Гречка"
+        },
+        {
+          "param": "Цена",
+          "value": "400 Р."
+        }
+      ],
+      "img": {
+        "src": "/img/buckwheat-small",
+        "alt": "Cat Energy Slim 500 г с гречкой в пластиковом стакане синего цвета",
+        "width": "140",
+        "height": "144"
+      }
+    },
+    {
+      "name": "Cat Energy Slim 1000&nbsp;г",
+      "primary": true,
+      "link": "cat-energy-buckwheat-big.html",
+      "specs": [
+        {
+          "param": "Вес",
+          "value": "1000&nbsp;г"
+        },
+        {
+          "param": "Вкус",
+          "value": "Гречка"
+        },
+        {
+          "param": "Цена",
+          "value": "700 Р."
+        }
+      ],
+      "img": {
+        "src": "/img/buckwheat-big",
+        "alt": "Cat Energy Slim 1000 г с гречкой в пластиковом стакане синего цвета",
+        "width": "140",
+        "height": "144"
+      }
+    },
+    {
+      "name": "Cat Energy Slim 500&nbsp;г",
+      "primary": true,
+      "link": "cat-energy-rice-small.html",
+      "specs": [
+        {
+          "param": "Вес",
+          "value": "500&nbsp;г"
+        },
+        {
+          "param": "Вкус",
+          "value": "Рис"
+        },
+        {
+          "param": "Цена",
+          "value": "500 Р."
+        }
+      ],
+      "img": {
+        "src": "/img/rice-small",
+        "alt": "Cat Energy Slim 500 г с рисом в пластиковом стакане фиолетового цвета",
+        "width": "140",
+        "height": "144"
+      }
+    }
+  ],
+  "secondary": [
+    {
+      "name": "Сахарозаменитель",
+      "primary": false,
+      "specs": [
+        {
+          "param": "packageSize",
+          "value": "100&nbsp;г"
+        },
+        {
+          "param": "price",
+          "value": "200&nbsp;Р"
+        }
+      ]
+    },
+    {
+      "name": "Питьевая вода",
+      "primary": false,
+      "specs": [
+        {
+          "param": "packageSize",
+          "value": "5 литров"
+        },
+        {
+          "param": "price",
+          "value": "50&nbsp;Р."
+        }
+      ]
+    },
+    {
+      "name": "Молоко",
+      "primary": false,
+      "specs": [
+        {
+          "param": "packageSize",
+          "value": "1 литр"
+        },
+        {
+          "param": "price",
+          "value": "100&nbsp;Р."
+        }
+      ]
+    },
+    {
+      "name": "Витамины",
+      "primary": false,
+      "specs": [
+        {
+          "param": "packageSize",
+          "value": "30 г"
+        },
+        {
+          "param": "price",
+          "value": "300&nbsp;Р."
+        }
+      ]
+    }
+  ]
+}
