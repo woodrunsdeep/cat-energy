@@ -1,3 +1,5 @@
+{% from "macros/picture.njk" import picture %}
+
 <footer class="page-footer">
     <div class="page-footer__top page-footer__top--contrast">
         <div class="page-footer__top-inner">
@@ -10,27 +12,13 @@
     </div>
     <div class="page-footer__middle">
         <a id="map" class="page-footer__map map-link" href="https://goo.gl/maps/5y6q4TU5HUWg9hCh6" target="_blank">
-            <picture>
-                <source type=image/webp media="(min-width: 1300px)"
-                        srcset="/img/bg-map-desktop@1x.webp 1x,
-                                /img/bg-map-desktop@2x.webp 2x">
-                <source type=image/webp media="(min-width: 768px)"
-                        srcset="/img/bg-map-tablet@1x.webp 1x,
-                                /img/bg-map-tablet@2x.webp 2x">
-                <source type=image/webp
-                        srcset="/img/bg-map-mobile@1x.webp 1x,
-                                /img/bg-map-mobile@2x.webp 2x">
-                <source media="(min-width: 1300px)"
-                        srcset="/img/bg-map-desktop@1x.png 1x,
-                                /img/bg-map-desktop@2x.png 2x">
-                <source media="(min-width: 768px)"
-                        srcset="/img/bg-map-tablet@1x.png 1x,
-                                /img/bg-map-tablet@2x.png 2x">
-                <img class="map-link__image" src="/img/bg-map-mobile@1x.png"
-                        srcset="/img/bg-map-mobile@2x.png"
-                        width="320"height="400"
-                        alt="Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8">
-            </picture>
+            {{ picture(
+                'map-link__image',
+                '/img/bg-map',
+                '320', '400',
+                'Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8'
+                )
+            }}
         </a>
     </div>
     <div class="page-footer__bottom">
