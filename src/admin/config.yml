@@ -1,6 +1,6 @@
 backend:
     name: git-gateway
-    branch: master
+    branch: netlify-build
 media_folder: "dist/img"
 public_folder: "/img"
 collections:
