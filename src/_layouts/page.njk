@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16.png">
     <link rel="icon" type="image/svg+xml" sizes="any" href="/img/favicons/favicon.svg">
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     {% include "header.njk" %}
@@ -26,5 +27,16 @@
     {% include "footer.njk" %}
 
     <script src="/js/script.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+                });
+            }
+            });
+        }
+    </script>
 </body>
 </html>
