@@ -4,6 +4,7 @@ const safeLinks = require('@sardine/eleventy-plugin-external-links');
 
 module.exports = function(config) {
     config.addPassthroughCopy('src/manifest.json');
+    config.addPassthroughCopy('src/admin/*');
 
     config.addPlugin(eleventyNavigationPlugin);
     config.addPlugin(safeLinks);
