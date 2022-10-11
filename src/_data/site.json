@@ -1,4 +1,14 @@
 {
   "title": "Cat Energy",
-  "description": "Интернет-магазин функционального корма для кошек"
+  "description": "Интернет-магазин функционального корма для кошек",
+  "address": {
+    "street": "ул. Большая Конюшенная, д. 19/8",
+    "city": "Санкт-Петербург"
+  },
+  "links": {
+    "vk": "https://vk.com/htmlacademy",
+    "ig": "https://instagram.com/htmlacademy",
+    "fb": "https://facebook.com/htmlacademy",
+    "htmlacademy": "https://htmlacademy.ru/intensive/adaptive"
+  }
 }

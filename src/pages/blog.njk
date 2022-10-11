@@ -1,0 +1,21 @@
+---
+mySlug: blog
+title: 'Блог'
+preview: 'Блог о функциональном питании для кошек'
+eleventyNavigation:
+    order: 4
+---
+<h1 class="page__title">Блог</h1>
+
+<ul class="posts">
+    {% for post in collections.posts %}
+        <li class="posts__item">
+            <article class="post">
+                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="450" height="250">
+                <h2 class="post__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                <p class="post__desc">{{ post.data.description }}</p>
+                <time class="post__date">{{ post.data.date }}</time>
+            </article>
+        </li>
+    {% endfor %}
+</ul>
