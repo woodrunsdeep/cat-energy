@@ -6,8 +6,6 @@ image: "/img/third-post.jpg"
 imageAlt: "alt for third post"
 ---
 
-## {{ title }}
-
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, corrupti.
 
 Lorem sit amet ipsum dolor sit amet.

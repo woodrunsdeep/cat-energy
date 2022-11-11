@@ -6,8 +6,6 @@ image: "/img/first-post.jpg"
 imageAlt: "alt for first post"
 ---
 
-## {{ title }}
-
 Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur eveniet accusamus quam optio consequuntur hic iste corrupti assumenda quia reprehenderit, laborum exercitationem reiciendis repellat accusantium non unde tempora doloribus, quisquam fugiat in? Quibusdam sit illo aspernatur excepturi ducimus voluptatem temporibus laborum? Vero pariatur impedit amet!
