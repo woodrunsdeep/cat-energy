@@ -17,7 +17,7 @@ module.exports = function(config) {
     config.addPlugin(safeLinks);
 
     config.addTransform('htmlmin', (content, outputPath) => {
-        if(outputPath && outputPath.endsWith('.html')) {
+        if (outputPath && outputPath.endsWith('.html')) {
             let htmlmin = require('html-minifier');
             let result = htmlmin.minify(
                 content, {
