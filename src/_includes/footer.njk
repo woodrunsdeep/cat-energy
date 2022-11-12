@@ -11,14 +11,15 @@
         </div>
     </div>
     <div class="page-footer__middle">
-        <a id="map" class="page-footer__map map-link" href="https://goo.gl/maps/5y6q4TU5HUWg9hCh6" target="_blank">
-            {{ picture(
-                'map-link__image',
-                '/img/bg-map',
-                '320', '400',
-                'Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8'
-                )
-            }}
+        <a id="map-link" class="page-footer__map map-link" href="https://goo.gl/maps/5y6q4TU5HUWg9hCh6" target="_blank">
+        {{ picture(
+            'map-link__image',
+            '/img/bg-map',
+            '320', '400',
+            'Наш офис в Санкт-Петербурге по адресу улица Большая Конюшенная, дом 19/8'
+            )
+        }}
+        <div id="map" class="map"></div>
         </a>
     </div>
     <div class="page-footer__bottom">
