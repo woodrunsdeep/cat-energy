@@ -11,6 +11,7 @@ module.exports = function (config) {
 module.exports = function(config) {
     config.addPassthroughCopy('src/manifest.json');
     config.addPassthroughCopy('src/admin/*');
+    config.addPassthroughCopy({ './node_modules/leaflet/dist/leaflet.css': 'css/leaflet.css' });
 
     config.addPlugin(eleventyNavigationPlugin);
     config.addPlugin(safeLinks);
