@@ -1,5 +1,11 @@
 import leaflet from 'leaflet';
 
+const mapLink = document.getElementById('map-link');
+
+mapLink.addEventListener('click', (evt) => {
+    evt.preventDefault();
+});
+
 const map = L.map('map').setView([59.93911192641083, 30.319588841008496], 17);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
