@@ -13,6 +13,7 @@
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "del": "^5.1.0",
+    "esbuild": "^0.15.11",
     "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
@@ -62,5 +63,8 @@
   },
   "engines": {
     "node": ">=14"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.2"
   }
 }
