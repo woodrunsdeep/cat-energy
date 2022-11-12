@@ -46,7 +46,7 @@
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "gulp": "gulp build",
     "js": "esbuild src/js/script.js --bundle --minify --outfile=dist/js/script.js",
-    "eleventy": "npx run eleventy",
+    "eleventy": "npx eleventy",
     "build": "npm-run-all gulp js eleventy",
     "start": "npm-run-all gulp js eleventy --parallel watch:*"
   },
