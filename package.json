@@ -13,6 +13,7 @@
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "del": "^5.1.0",
+    "esbuild": "^0.15.11",
     "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
@@ -30,6 +31,7 @@
     "gulp-webp": "^4.0.1",
     "html-minifier": "^4.0.0",
     "husky": "^7.0.4",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.49.11",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
@@ -37,10 +39,16 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "eslint": "eslint ./src/**/*.js",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "sass --watch src/sass/style.scss:dist/css/style.min.css",
+    "build:sass": "sass  --no-source-map src/sass/style.scss:dist/css/style.min.css",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
-    "build": "gulp build && eleventy",
-    "start": "gulp build && npx eleventy --serve"
+    "gulp": "gulp build",
+    "js": "esbuild src/js/script.js --bundle --minify --outfile=dist/js/script.js",
+    "eleventy": "npx eleventy",
+    "build": "npm-run-all gulp js eleventy",
+    "start": "npm-run-all gulp js eleventy --parallel watch:*"
   },
   "browserslist": [
     "last 2 versions",
@@ -62,5 +70,8 @@
   },
   "engines": {
     "node": ">=14"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.2"
   }
 }

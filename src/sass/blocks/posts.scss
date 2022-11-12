@@ -1,0 +1,13 @@
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 2fr));
+    gap: 40px;
+    list-style: none;
+    padding-left: 0;
+}
+
+@media (min-width: 600px) {
+    .posts {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    }
+}
