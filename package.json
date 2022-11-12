@@ -38,6 +38,8 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "eslint": "eslint ./src/**/*.js",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "sass --watch src/sass/style.scss:dist/css/style.min.css",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp build && eleventy",
