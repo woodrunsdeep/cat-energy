@@ -1,5 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const safeLinks = require('@sardine/eleventy-plugin-external-links');
+const { DateTime } = require("luxon");
+const { srcset, src } = require("./_11ty/shortcodes");
 
 
 module.exports = function(config) {
