@@ -3,13 +3,15 @@ function initSlider() {
     const buttonBefore = document.querySelector('.slider__button--before');
     const buttonAfter = document.querySelector('.slider__button--after');
 
-    buttonAfter.addEventListener('click', () => {
-        fatCat.style.width = '0';
-    });
+    if (fatCat) {
+        buttonAfter.addEventListener('click', () => {
+            fatCat.style.width = '0';
+        });
 
-    buttonBefore.addEventListener('click', () => {
-        fatCat.style.width = '100vw';
-    });
+        buttonBefore.addEventListener('click', () => {
+            fatCat.style.width = '100vw';
+        });
+    }
 }
 
 initSlider();
