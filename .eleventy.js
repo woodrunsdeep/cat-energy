@@ -3,6 +3,10 @@ const safeLinks = require('@sardine/eleventy-plugin-external-links');
 const { DateTime } = require("luxon");
 const { srcset, src } = require("./_11ty/shortcodes");
 
+module.exports = function (config) {
+    config.addFilter("postDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj, { locale: "ru" }).toFormat("d MMMM yyyy");
+    });
 
 module.exports = function(config) {
     config.addPassthroughCopy('src/manifest.json');
