@@ -1,6 +1,6 @@
 ---
-title: 'my second post'
-description: 'Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet. Tempora mollitia nam!'
+title: "My Second Post"
+description: "Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet. Tempora mollitia nam!"
 date: 2022-05-04
 image: "/img/second-post.jpg"
 imageAlt: "alt for second post"
