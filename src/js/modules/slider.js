@@ -25,4 +25,4 @@ function initSlider() {
     }
 }
 
-exports.initSlider = initSlider;
+initSlider();
