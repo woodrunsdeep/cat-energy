@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .not-found__title {
@@ -15,9 +16,24 @@
 
 .not-found__image {
     border-radius: 50%;
+    max-width: 50%;
 }
 
 .not-found__link {
     color: #5eaa2f;
     display: block;
+}
+
+@media (min-width: $tablet-width) {
+    .not-found {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .not-found__image {
+        max-width: 30%;
+    }
 }
