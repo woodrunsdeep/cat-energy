@@ -17,6 +17,11 @@
     margin-bottom: 35px;
 }
 
+.extra-products__price-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
 /* --------- Tablet --------- */
 
 @media (min-width: $tablet-width) {
