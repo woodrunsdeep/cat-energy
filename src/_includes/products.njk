@@ -15,19 +15,19 @@
                             )
                         }}
                     </a>
-                    <div class="product__text-wrapper">
-                        <h3 class="product__title">
-                            <a class="product__title-link" href="{{ product.link }}">{{ product.name | safe }}</a>
-                        </h3>
-                        <table class="product__specs specs">
-                            {% for item in product.specs %}
-                                <tr class="specs__item">
-                                    <td class="specs__text">{{ item.param | safe }}</td>
-                                    <td class="specs__value">{{ item.value | safe }}</td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    </div>
+                    <table class="product__specs specs">
+                        <caption class="product__caption">
+                            <h3 class="product__title">
+                                <a class="product__title-link" href="{{ product.link }}">{{ product.name | safe }}</a>
+                            </h3>
+                        </caption>
+                        {% for item in product.specs %}
+                            <tr class="specs__item">
+                                <th scope="row" class="specs__text">{{ item.param | safe }}</th>
+                                <td class="specs__value">{{ item.value | safe }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
                     <a class="product__link button" href="checkout.html">Заказать</a>
                 </article>
             </li>
