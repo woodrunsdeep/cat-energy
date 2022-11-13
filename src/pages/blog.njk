@@ -12,7 +12,7 @@ eleventyNavigation:
             <article class="post-card">
                 <img class="post-card__image" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="450" height="250">
                 <h2 class="post-card__title">
-                    <a class="post-card__link" href="{{ post.url }}">{{ post.data.title | CapitalizeTitle }}</a>
+                    <a class="post-card__link" href="{{ post.url }}">{{ post.data.title | capitalizeTitle }}</a>
                 </h2>
                 <p class="post-card__desc">{{ post.data.description }}</p>
                 <time class="post-card__date">{{ post.data.date | ruDate }}</time>
