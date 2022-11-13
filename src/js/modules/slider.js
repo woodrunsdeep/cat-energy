@@ -10,8 +10,6 @@ function initSlider() {
         fatCat.setAttribute('style', `width: calc(${currentWidth}% + 30px)`);
     }
 
-    slider.addEventListener('input', update);
-
     if (fatCat) {
         buttonAfter.addEventListener('click', () => {
             fatCat.style.width = '0';
@@ -22,7 +20,9 @@ function initSlider() {
             fatCat.style.width = '100vw';
             slider.value = 0;
         });
+
+        slider.addEventListener('input', update);
     }
 }
 
-initSlider();
+exports.initSlider = initSlider;
