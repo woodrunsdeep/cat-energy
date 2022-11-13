@@ -1,0 +1,23 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found__title {
+    text-align: center;
+}
+
+.not-found__text {
+    font-size: 18px;
+    text-align: center;
+}
+
+.not-found__image {
+    border-radius: 50%;
+}
+
+.not-found__link {
+    color: #5eaa2f;
+    display: block;
+}
