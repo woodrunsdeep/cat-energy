@@ -1,6 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const safeLinks = require('@sardine/eleventy-plugin-external-links');
 const { DateTime } = require("luxon");
+const capitalizeTitle = require('./src/_11ty/filters/capitalizeTitle.js')
 
 module.exports = function (config) {
     config.addFilter("postDate", (dateObj) => {
@@ -13,6 +14,16 @@ module.exports = function (config) {
 
     config.addPlugin(eleventyNavigationPlugin);
     config.addPlugin(safeLinks);
+
+    config.addFilter('ruDate', (value) => {
+        return value.toLocaleString('ru', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }).replace(' г.', '');
+    });
+
+    config.addFilter('capitalizeTitle', capitalizeTitle);
 
     config.addTransform('htmlmin', (content, outputPath) => {
         if (outputPath && outputPath.endsWith('.html')) {
