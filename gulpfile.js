@@ -12,7 +12,6 @@ const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
 const gwebp = require('gulp-webp');
-const terser = require('gulp-terser');
 
 const css = () => src('src/sass/style.scss')
     .pipe(plumber())
