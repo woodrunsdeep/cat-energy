@@ -64,16 +64,18 @@
     }
 
     .extra-products__inner {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr auto;;
+        grid-template-rows: 161px 1fr;
+        column-gap: 80px;
     }
 
-    .extra-products__list {
-        flex-grow: 1;
-        max-width: 895px;
+    .extra-products__price-list {
+        grid-row: 1 / -1
     }
 
     .extra-products__bonus {
         margin: 0;
+        grid-row: 2 / -1;
     }
 }
