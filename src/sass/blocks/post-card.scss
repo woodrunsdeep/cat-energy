@@ -1,0 +1,18 @@
+.post-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card__title {
+    order: -1;
+}
+
+.post-card__link {
+    color: black;
+}
+
+.post-card__image {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+}
