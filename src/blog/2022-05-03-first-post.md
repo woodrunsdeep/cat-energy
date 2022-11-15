@@ -1,12 +1,10 @@
 ---
-title: 'my first post'
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta et corporis, quos porro eaque eum!'
+title: "My First Post"
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta et corporis, quos porro eaque eum!"
 date: 2022-05-03
 image: "/img/first-post.jpg"
 imageAlt: "alt for first post"
 ---
-
-## {{ title }}
 
 Lorem ipsum dolor sit amet.
 

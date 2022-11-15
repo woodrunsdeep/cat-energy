@@ -12,7 +12,6 @@ const imagemin = require('gulp-imagemin');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
 const gwebp = require('gulp-webp');
-const terser = require('gulp-terser');
 
 const css = () => src('src/sass/style.scss')
     .pipe(plumber())
@@ -61,10 +60,6 @@ const copy = () => src([
 
 const clean = () => del('dist');
 
-const compressJs = () => src('src/js/**/*.js')
-    .pipe(terser())
-    .pipe(dest('dist/js'));
-
 const server = () => {
     bsync.init({
         server: 'dist/',
@@ -86,7 +81,6 @@ const build = series(
         webp,
         css,
         sprite,
-        compressJs,
     ]),
 );
 

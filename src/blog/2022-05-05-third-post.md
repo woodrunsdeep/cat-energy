@@ -1,12 +1,10 @@
 ---
-title: 'my third post'
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta et corporis, quos porro eaque eum!'
+title: "My Third Post"
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta et corporis, quos porro eaque eum!"
 date: 2022-05-05
 image: "/img/third-post.jpg"
 imageAlt: "alt for third post"
 ---
-
-## {{ title }}
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, corrupti.
 

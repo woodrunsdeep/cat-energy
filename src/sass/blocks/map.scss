@@ -1,0 +1,12 @@
+/* stylelint-disable selector-max-id, declaration-no-important */
+#map {
+    min-height: 400px;
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+    .map__pin {
+        width: 114px !important; // to override inline styles set by leaflet
+        height: 106px !important;
+    }
+}

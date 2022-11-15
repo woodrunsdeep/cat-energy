@@ -1,11 +1,9 @@
 ---
-title: Another post
-description: Quos sint, voluptatem tenetur. Veniam corrupti eaque modi reprehenderit magni.
-author: Gleb Dmitriev
-date: 2022-05-07T20:18:33.023Z
-tags: post
-image: /img/joanna-kosinska-j69iefxlvwm-unsplash.jpg
-imageAlt: A bunch of figue fruits
+title: "Another post"
+description: "Quos sint, voluptatem tenetur. Veniam corrupti eaque modi reprehenderit magni."
+date: 2022-05-08
+image: "/img/joanna-kosinska-j69iefxlvwm-unsplash.jpg"
+imageAlt: "A bunch of figue fruits"
 ---
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil voluptates dolores officia repellat corporis, beatae sunt odit atque numquam soluta nemo unde culpa minus deleniti itaque eius natus minima aspernatur,
 

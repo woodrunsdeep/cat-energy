@@ -6,25 +6,24 @@ In the process I learn a bit of different stuff like 11ty, Nunjucks, Leaflet, et
 
 Here's the summary of what I've done so far:
 - Added pages:
-  - index page
-  - 🗃️ catalog
-  - 📋 form page
-  - 📰 blog
+    - 📰 blog
+    - 🗃️ catalog
+    - 📋 form page
 - Running on 11ty with templating via Nunjucks
-- Hosted on Netlify
+- Hosted on Netlify 
 - Content managment via Netlify CMS
 
 Plan to make:
-- Add new pages:
-  - ℹ️ about
-  - 🛒 cart
-  - 💳 checkout
-  - 🛍️ product
-  - 🧑🏽‍🤝‍🧑🏻 team
-- Deliver images via CDN
+- Add new pages
+    - ℹ️ about
+    - 🛒 cart
+    - 💳 checkout
+    - 🛍️ product
+    - 🧑🏽‍🤝‍🧑🏻 team
+- Deliver images via Cloudinary
 - Add pagination for catalog
+- Design packages for new flavours
 - Add comments section
 - Add feedback form
-- Design packages for new flavours
 - Design basic dark theme
-- Make site bilingual
+- Made site bilingual
