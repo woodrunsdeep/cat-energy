@@ -11,7 +11,7 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "@sardine/eleventy-plugin-external-links": "^1.4.0",
     "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
+    "browser-sync": "2.27.x",
     "del": "^5.1.0",
     "esbuild": "^0.15.11",
     "eslint": "^7.15.0",
